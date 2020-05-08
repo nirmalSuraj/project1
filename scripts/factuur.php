@@ -32,7 +32,7 @@ try{
     
     */ 
 
-    $_user=($_SESSION['admin']?$_SESSION['index']:$_user);
+    $_user=($_SESSION['index']!=null?$_SESSION['index']:$_user);
 
 
     ///alle facturnummers en datum toonen  als toon_fac niet set is 
@@ -41,7 +41,6 @@ try{
 
         $_inhoud.="<div class='col-md-12 col-sm-12 producten '>
             <h1>U facturen</h1>";
-        //check of dat facturen bestaan
 
         $_query ="select * from t_factuur where t_users_d_index={$_user}";
         $_resul = $_PDO->query("$_query");

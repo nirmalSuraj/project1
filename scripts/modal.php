@@ -55,7 +55,7 @@ wij komen in deze script binnen via moadal.js(ajax)
 
                 if($_SESSION['tabelIndex'] == "t_factuur" ){
                     $_SESSION["menu"]=5;
-                    $_SESSION['admin']=true;
+                   
                     $_SESSION['index']=$_row['d_index'];
                     echo "<form  method='post' action='factuur.php'>
 

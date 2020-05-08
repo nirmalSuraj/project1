@@ -35,7 +35,6 @@
     <input type='text' name='mail' size='40'> 
     </fieldset>
 		<input name='bekijken' id='submit' type='submit' value='verzenden'>
-    </form>
-    </div>
+   
     ";
 ?>

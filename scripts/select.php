@@ -106,6 +106,10 @@ try{
     if($_SESSION['tabelIndex'] == "t_soort" ){
         require("../code/soort_update_toevoegen.php");
     }
+    
+    $_inhoud.="<button><a href='a_admin.php' class='janee'>Back</a></button>
+     </form>
+    </div>";
 
 
     $_menu=5;

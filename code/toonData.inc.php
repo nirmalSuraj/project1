@@ -1,5 +1,9 @@
 <?php
-
+/*
+  op basis van welke table dat wij binnen krijgen, gaan wij soort data tonen.
+  aangezien dat in bepaalde tables kolommen anders genoemd zijn moet wij if gebruiken om bij juiste table juiste 
+  kolom te plaatsen/tonen.
+*/
 
 if( $_create_table  == "v_full_gegevens_users"){
     $_inhoud.= "
