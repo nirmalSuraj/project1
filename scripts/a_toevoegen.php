@@ -45,7 +45,8 @@ try{
         if($_valideren->check()){
             //insert("t_users","d_naam,d_email,d_voornaam",)
             $_upload=upload_img($_FILES["img"],["png"],"100000");
-            list($_path,$_bool)=explode("-",$_upload);/*
+            list($_path,$_bool)=explode("-",$_upload);
+            /*
             if($_POST['nieuw_soort'] != null){
                 insert('t_soort',"d_soorNaam",[$_POST['nieuw_soort']]);
             }
@@ -69,7 +70,7 @@ try{
                     $_POST['beschrijv'],
                     $_path]);
 
-            $_msg="Update gelukt";
+            $_msg="insert gelukt";
             Redirect::to("a_admin.php?msg='Update gelukt'");
 
         }else{
@@ -80,7 +81,35 @@ try{
 
 
     }
+    //toevoegen soort
+    if($_SESSION['tabelIndex'] == "t_soort"){
+        
+            $_valideren=new Validatie();
+            $_valideren->validate($_POST,[
+                "naam"=>[
+                    "charMax"=>45,
+                    "charMin"=>2
+                ]
 
+            ]);
+            if($_valideren->check()){
+
+                  insert($_SESSION['tabelIndex'],
+                       "d_SoorNaam
+                       ",
+                       [$_POST['naam']]);
+              
+
+                $_msg="insert gelukt";
+                Redirect::to("a_admin.php?msg='Update gelukt'");
+
+            }else{
+
+                $_error="{$_valideren->errorValidate()}";
+                Redirect::to("a_admin.php?error='{$_valideren->errorValidate()}'");
+            }
+
+    }
 
 }catch(Exception $e){
 

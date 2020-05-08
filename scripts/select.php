@@ -30,7 +30,7 @@ try{
     //                          van de template komt
     // $_start --> start positie voor de drop-downs 
     //             (soort-lid & gender)	
-  
+
     switch ($_SESSION["actie"])					
     {		
         case 7: // bekijken
@@ -94,31 +94,17 @@ try{
     }else{
         require "../code/admin_producten.php";
     }
-
+    //form voor toevoegen
     if($_SESSION['tabelIndex'] == "v_selectproducten" && $_SESSION["actie"] == 9){
 
         require("../code/producten_update_toevoeg.php");
     }
-     if($_SESSION['tabelIndex'] == "t_soort" ){
-$_inhoud= "
-   
-   <div class='col-lg-6 col-sm-12 regisform form'>
-   <h1>Zoeken</h1>
-    <form  method='post' id='form' action='$_srv'>
-    <fieldset>
-   
-    ";
-       $_inhoud.="<label >soort </label>
-        <input type='text' name='naam'  >
-        
-     
-	 
-    </fieldset>
-		<input name='bekijken' id='submit' type='submit' value='verzenden'>
-        
-    </form>
-    
-     <div>";
+    if($_SESSION['tabelIndex'] == "t_soort"  && $_SESSION["actie"] == 9 ){
+        require("../code/soort_update_toevoegen.php");
+    }
+
+    if($_SESSION['tabelIndex'] == "t_soort" ){
+        require("../code/soort_update_toevoegen.php");
     }
 
 

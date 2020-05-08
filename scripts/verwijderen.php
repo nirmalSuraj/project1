@@ -86,6 +86,36 @@ try{
             }   
 
         }
+        
+         if($_SESSION['tabelIndex'] == 't_soort'){
+           
+            /* indien $_SESSION index is niet set dat wil zeggen dat waarde komt via de kant van admin met post
+            als het niet set copier de waarde van post naar $_SESSION index 
+            */
+            //$_SESSION['index']=( $_SESSION['index'] !=""? $_SESSION['index']:$_POST['index']);
+            //als tablegelijk aan view dan geef de table waarde
+            $_SESSION['tabelIndex']=($_SESSION['tabelIndex'] != 'v_selectproducten'?$_SESSION['tabelIndex']:'t_producten');  
+
+            //in t_authentication is index var ingegeven als (d_user). zodus als table index == t_authentication dan d_user
+            $_index=($_SESSION['tabelIndex'] != 't_authentication'?"d_index":"d_user");
+            //verwijderen 
+            delete($_SESSION['tabelIndex'],[$_index,"=",$_POST['index']]);
+
+
+            $_query="select * from {$_SESSION['tabelIndex']} where $_index={$_POST['index']}";
+
+            $_resul=$_PDO->query("$_query");
+            //gegevens bestaan niet dan throw database inconsistentie 
+            if($_resul->rowCount() > 0){
+                logSecurityInfo($_user,"heeft id:{$_POST['index']}, {$_POST['naam']} is verwijdert");
+                Redirect::to("a_admin.php?error=Niet gelukt, er is iets misgelopen");
+
+            }else{
+                logSecurityInfo($_user,"id:{$_POST['index']}, {$_POST['naam']} iets misgelopen tijdens het verwijderen");
+                Redirect::to("a_admin.php?msg=Verwijdert");
+            }   
+
+        }
 
     }
 
@@ -94,11 +124,7 @@ try{
     /* als jij op deze pagina binnen komt dan word menu waarde mee gestuurd via superglobal get $_get['menu'] of post 
    afhankelijk hoe jij binnenkomt
 */
-    $_menu=$_SESSION["menu"];
-
-
-
-    require "../code/output.inc.php";
+   
 }catch(Exception $e){
 
     require("../php_lib/myExceptionHandling.inc.php");
