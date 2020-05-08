@@ -92,7 +92,7 @@ wij komen in deze script binnen via moadal.js(ajax)
  daar voor gaan wij if en else gebruiken voor hidden parameters 
 */
                 case 10:// verwijderen
-                    $_SESSION["menu"]=4;
+                    $_SESSION["menu"]=5;
                     echo "<form  method=post action=verwijderen.php >
                     ";
                         if($_SESSION['tabelIndex'] == "v_full_gegevens_users"){
