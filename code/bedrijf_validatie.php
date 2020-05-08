@@ -1,0 +1,24 @@
+<?php
+ $_valideren=new Validatie();
+        $_valideren->validate($_POST,[
+            "bedrijf"=>[
+                "charMax"=>45,
+                "charMin"=>5  
+            ],
+            "btw"=>[
+                "charMax"=>12,
+                "charMin"=>12,
+                "btw"=>"btw"
+            ],
+            "straat"=>[
+                "charMax"=>50,
+                "charMin"=>4  
+            ],
+            "postcode"=>[],
+            "gemeente"=>[],
+            "tel"=>[
+                "charMax"=>10,
+                "charMin"=>10
+            ],
+            "nr"=>[]
+        ]);

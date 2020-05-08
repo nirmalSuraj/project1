@@ -1,0 +1,116 @@
+//gender
+insert into t_gender(d_index,d_sex) values(0,""),(1,"V"),(2,"M"),(3,"X");
+
+//aanspreek
+insert into t_aanspreektitel(d_index,d_aanspreekTitel)
+values(0,""),(1,"Mevrouw"),(2,"Mijnheer")(3,"Dhr")
+
+//btw
+INSERT into t_btw (d_btw)
+VALUES(""),("6%"),("12%"),("21%")
+//soort producten
+INSERT into t_soort (d_soorNaam)
+VALUES(""),("Fruit"),("Groeten"),("pan")
+
+//t_producte
+INSERT INTO t_producten(d_productNaam,d_img,d_prijs,d_psofkg,d_beschrijving,t_soort_d_index,t_btw_d_index)
+VALUES("Mango","../img/mango.jpeg",2.5,"ps","Afrika",2,1),("Tomaten","../img/tomaat.jpg",3,"kg","Bel",3,1),
+("Prei","../img/prei.jpg",2.5,"ps","bel",2,1)
+
+//rol
+insert into t_rol(d_index,d_rol)
+VALUES(0,""),(1,"klant"),(2,"Magazijn"),(3,"Verantwoordelijk"),(4,"Baas")
+
+*****************************************************************joins***********************************
+///v_selectProducten
+
+create VIEW v_selectProducten as
+SELECT x.d_index as d_index, 
+d_productNaam, 
+d_img, 
+d_prijs, 
+d_beschrijving, 
+d_btw, 
+t_btw.d_index as d_btxind, 
+x.d_stock as d_stock, 
+t_soort.d_soorNaam as d_soorNaam,
+x.d_psofkg as d_psofkg, 
+x.t_soort_d_index 
+from t_producten as x JOIN t_soort on(x.t_soort_d_index=t_soort.d_index) 
+JOIN t_btw on(x.t_btw_d_index=t_btw.d_index)
+
+
+
+
+
+
+/v_bijwerken
+
+
+create VIEW v_bijwerken as
+SELECT 
+t_list.d_index as d_id,
+ t_producten.d_productNaam as d_productNaam, 
+t_producten.d_img as d_img, 
+t_producten.d_prijs as d_prijs,
+ t_btw.d_btw as d_btw,
+ t_list.d_aantal as d_aantal,
+ t_producten.d_index as d_index,
+ t_producten.t_soort_d_index, 
+t_producten.d_psofkg as d_psofkg,
+t_producten.d_stock as d_stock
+from t_list JOIN t_producten on(t_list.t_producten_d_index=t_producten.d_index) join t_btw on(t_producten.t_btw_d_index=t_btw.d_index)
+
+ ///t_menu
+INSERT INTO t_menu (d_item,d_link,d_volgorde,d_menu,d_0,d_1,d_2,d_3,d_4)
+ VALUES("Shoppen","shoppen.php?actie=1",0,1,0,1,0,0,0),
+ ("Registeren","resgisteren.php",1,0,0,0,0,0,0),
+("Login","login.php",0,0,1,1,1,1,1)
+
+
+//volledige vieuw van bedrijf gegevens
+CREATE VIEW v_full_gegevens_bedrijf as
+
+SELECT 
+t_bedrijf.d_index as d_index,
+t_bedrijf.d_naam as d_naam,
+t_bedrijf.d_straat as d_straat,
+t_bedrijf.d_huisNummer as d_huisNummer,
+t_bedrijf.t_users_d_index as d_user,
+t_gemeente.d_postcode as d_postcode,
+t_gemeente.d_gemeentenaam as d_gemeentenaam
+FROM `t_bedrijf`
+JOIN t_gemeente on(t_bedrijf.t_gemeente_d_index=t_gemeente.d_index )
+
+/v_full_gegevens_users///////////////////////////////////////////////////
+create VIEW v_full_gegevens_users as
+SELECT
+us.d_index as d_index,
+t_aanspreektitel.d_aanspreekTitel,
+t_aanspreektitel.d_index as d_aanspreekindx,
+us.d_naam as d_naam,
+us.d_voornaam as d_voornaam,
+us.d_email as d_email,
+us.d_geboortedatum as d_geboortedatum,
+us.d_straat as d_straat,
+us.d_huisNummer as d_huisNummer,
+t_rol.d_rol as d_rol,
+t_rol.d_index as d_rol_index,
+us.d_telefoonnummer as d_telefoonnummer,
+t_gemeente.d_gemeentenaam as d_gemeentenaam,
+t_gemeente.d_index as d_pk,
+t_gemeente.d_postcode,
+t_gender.d_sex as d_sex,
+t_gender.d_index as d_sex_index
+
+from t_users as us 
+JOIN t_gemeente on(us.t_adres_d_index=t_gemeente.d_index)
+JOIN t_gender on(us.t_gender_d_index=t_gender.d_index)
+JOIN t_aanspreektitel on(us.t_aanspreekTitel_d_index=t_aanspreektitel.d_index)
+JOIN t_rol on (us.t_rol_d_index=t_rol.d_index);
+ 
+
+//////////t_mnemonic//////////////////////////////
+INSERT INTO t_mnemonic (d_mnemonic,d_table)
+VALUES("Bedrijf","t_bedrijf"),("Aanspreektitel","t_aanspreektitel"),
+("Gender","t_gender"),("Users","t_users")

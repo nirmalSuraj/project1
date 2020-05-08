@@ -1,0 +1,3 @@
+
+-schrijf een script voor de foto van home_klant te wijzigen.
+--limte van  producten aanpassen

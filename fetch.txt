@@ -1,0 +1,54 @@
+let insert_div=document.querySelector('#list_product');
+
+
+function fetch(){
+
+    let xml=new XMLHttpRequest();
+    xml.onload=()=>{
+
+        if(xml.status == 200){
+
+            insert_div.innerHTML=xml.responseText;
+
+            let x=document.querySelectorAll(".aanpassen"),
+                aantal_prducten=x.nextElementSibling;
+            console.dir(x)
+            carN.innerHTML="lk,s";
+         
+            
+            koppen_en_elementen(x)
+
+            
+
+
+        }else if(xml.status == 404){
+            alert();
+        }
+    }
+
+
+    xml.open("POST","../scripts/show_list.php",true);
+    xml.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xml.send("toegang=ja");
+
+}
+
+
+fetch()
+
+
+function hide_div(par){
+    par.parentElement.style.display="none";
+    let list=document.querySelector("#container");
+
+
+}
+
+function button_com(button){
+
+    fetch()
+
+
+}
+
+
