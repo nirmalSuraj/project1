@@ -24,18 +24,20 @@ wij komen in deze script binnen via moadal.js(ajax)
 
         throw new Exception("illegal access");
     }
-
-    $_query="select * from {$_SESSION['tabelIndex']} where d_index = ?";
+ 
+    $_query="select * from ".($_SESSION['tabelIndex']=='t_factuur'?'v_full_gegevens_users':$_SESSION['tabelIndex'])." where d_index = ?";
 
     $_resul = $_PDO->prepare("$_query");
     $_resul->execute([$_POST["index"]]);
-
+  
     if($_resul->rowCount() == 0 ){
+ 
         throw new Exception("database inconsistent");
+  
     }else{
         while($_row=$_resul->fetch(PDO::FETCH_ASSOC)){
             if($_SESSION['tabelIndex'] != "v_selectproducten"){
-                echo $_row['d_voornaam']." ".
+                echo $_row['d_soortNaam']." ".
                     $_row['d_naam'].
                     "<br><br>" .
                     $_row['d_sex'].
@@ -60,6 +62,7 @@ wij komen in deze script binnen via moadal.js(ajax)
 						<input  name='factuur' class='janee' type='submit' value='factuur' >
 						</form>";
                 }
+                
             }else{
                 echo "<div class='row'><div class='col-md-12 col-sm-12 producten '>
 
@@ -111,7 +114,7 @@ wij komen in deze script binnen via moadal.js(ajax)
 
                 case 8: // aanpassen
                     $_SESSION["menu"]=5;
-
+                  
                     echo "<form  method='post' action='aanpassen.php'>
 
 						<input name='index' type='hidden' value='".$_row['d_index']."'>

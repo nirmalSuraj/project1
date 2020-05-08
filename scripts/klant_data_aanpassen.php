@@ -183,7 +183,7 @@ try{
             list($_path,$_bool)=explode("-",upload_img($_FILES["img"],["png"],"100000"));
 
 
-           //old index van soort 
+            //old index van soort 
             $_old=get_val_data("t_soort_d_index","v_selectproducten","d_index",$_SESSION['index']);
             //btw index ophalen (deze gaat voor een probleem zorgen )
             $_btw=get_val_data("d_btxind","v_selectproducten","d_index",$_SESSION['index']);
@@ -222,7 +222,7 @@ try{
                        d_beschrijving='{$_POST['beschrijv']}'
                        ",
                        ["d_index","=",$_SESSION['index']]);
-               //als bool true is dan afbeelding opslaan
+                //als bool true is dan afbeelding opslaan
                 if($_bool){
                     update($_SESSION['tabelIndex'],"d_img='{$_path}'",["d_index","=",$_SESSION['index']]);
                 }
@@ -238,6 +238,40 @@ try{
 
 
         }
+
+        //updaten soort
+        if($_SESSION['tabelIndex'] == "t_soort"){
+
+
+
+            $_valideren=new Validatie();
+            $_valideren->validate($_POST,[
+                "naam"=>[
+                    "charMax"=>45,
+                    "charMin"=>2
+                ]
+
+            ]);
+            if($_valideren->check()){
+
+                update($_SESSION['tabelIndex'],
+                       "d_SoorNaam='$_naam'
+                       ",
+                       ["d_index","=",$_SESSION['index']]);
+              
+
+                $_msg="Update gelukt";
+                //Redirect::to("klant_profiel.php?msg='Update gelukt'");
+
+            }else{
+
+                $_error="{$_valideren->errorValidate()}";
+                //Redirect::to("klant_profiel.php?error='{$_valideren->errorValidate()}'");
+            }
+
+
+        }
+
 
 
         if($_SESSION["actie"] != 8){

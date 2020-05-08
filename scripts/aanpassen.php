@@ -6,7 +6,7 @@ try{
 
     $_tpl='home_klant.tpl';
      $_toegang=[6,8];
-     if (!isset($_SESSION["actie"]) || !in_array($_SESSION["actie"],$_toegang)){
+      if (!isset($_SESSION["actie"]) || !in_array($_SESSION["actie"],$_toegang)){
 
         throw new Exception("illegal access");
     }
@@ -41,7 +41,7 @@ try{
 
 
    /*wij gaan hier gegevens van de $_SESSION['tabelIndex'](table) op halen op basis van $_SESSION['index'](user id ) en  tonen in een form */
- 
+
     $_query="select * from {$_SESSION['tabelIndex']} where $_index={$_SESSION['index']}";
 
     $_resul=$_PDO->query("$_query");
@@ -67,6 +67,25 @@ try{
         if($_SESSION['tabelIndex'] == "v_selectproducten" ){
          
             require("../code/producten_update_toevoeg.php");
+        }
+        
+        if($_SESSION['tabelIndex'] == "t_soort" ){
+         
+           $_inhoud= "
+           <fieldset>
+   <div class='col-lg-6 col-sm-12  form'>
+   <h1>Soort aanpassen</h1>
+    <form  method='post' id='form' action='$_srv' >
+    <fieldset>
+     <label>Soort naam</label>
+    <input type='text'  name='naam' value='{$_row['d_soorNaam']}'>
+    </fieldset>
+    <button class='janee' ><a href='a_admin.php'>Back</a></button>
+		<input name='aanpassen' id='submit' type='submit' value='Aanpassen'>
+
+    </form>
+
+     <div>";
         }
 
 

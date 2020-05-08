@@ -14,13 +14,13 @@ try{
         throw new Exception("illegal access");
     }
 
-
-    if($_SESSION['tabelIndex'] != "v_selectproducten"){
+    if($_SESSION['tabelIndex'] != "v_selectproducten" &&  $_SESSION['tabelIndex'] != "t_soort" ){
         $_create_table="v_full_gegevens_users";
+
     }else{
          $_create_table=$_SESSION['tabelIndex'];
     }
-
+   
     require "../code/inputUitpakken.inc.php";
     require("../code/useCreateSelect.inc.php");
 
@@ -32,14 +32,16 @@ try{
         $_inhoud="  <div class='col-md-12'><table>";
         while ($_row = $_result -> fetch(PDO::FETCH_ASSOC)) 
         {
+   
            
-                
                 require("../code/toonData.inc.php"); 
             
 
 
-
+ 
         }
+       
+        
         $_inhoud.="</table></div>";
     }
     else // geen resultaten voor de gegeven input

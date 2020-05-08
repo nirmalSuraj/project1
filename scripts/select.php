@@ -30,6 +30,7 @@ try{
     //                          van de template komt
     // $_start --> start positie voor de drop-downs 
     //             (soort-lid & gender)	
+  
     switch ($_SESSION["actie"])					
     {		
         case 7: // bekijken
@@ -98,6 +99,28 @@ try{
 
         require("../code/producten_update_toevoeg.php");
     }
+     if($_SESSION['tabelIndex'] == "t_soort" ){
+$_inhoud= "
+   
+   <div class='col-lg-6 col-sm-12 regisform form'>
+   <h1>Zoeken</h1>
+    <form  method='post' id='form' action='$_srv'>
+    <fieldset>
+   
+    ";
+       $_inhoud.="<label >soort </label>
+        <input type='text' name='naam'  >
+        
+     
+	 
+    </fieldset>
+		<input name='bekijken' id='submit' type='submit' value='verzenden'>
+        
+    </form>
+    
+     <div>";
+    }
+
 
     $_menu=5;
 
