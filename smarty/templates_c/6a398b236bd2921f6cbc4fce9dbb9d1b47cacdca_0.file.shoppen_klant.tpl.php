@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2020-05-07 12:16:20
+/* Smarty version 3.1.31, created on 2020-05-11 15:31:36
   from "C:\xampp\htdocs\project\smarty\templates\shoppen_klant.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5eb3dff4eee7f9_55294943',
+  'unifunc' => 'content_5eb953b8ea34a4_44623806',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6a398b236bd2921f6cbc4fce9dbb9d1b47cacdca' => 
     array (
       0 => 'C:\\xampp\\htdocs\\project\\smarty\\templates\\shoppen_klant.tpl',
-      1 => 1588846332,
+      1 => 1589203891,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5eb3dff4eee7f9_55294943 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5eb953b8ea34a4_44623806 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +42,7 @@ function content_5eb3dff4eee7f9_55294943 (Smarty_Internal_Template $_smarty_tpl)
 
 
             <div class="container-fluid" id="nav" >
-
+                <div id="extra"> 
                 <div class="row" id="nav1">
 
                     <ul >
@@ -104,6 +104,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_teller'] = $__section_teller_0_saved;
 
 
 
+            </div>
             </div>
 
         </header>

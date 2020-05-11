@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2020-05-01 16:30:22
+/* Smarty version 3.1.31, created on 2020-05-11 16:26:20
   from "C:\xampp\htdocs\project\smarty\templates\profiel.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5eac327e5641a6_40230901',
+  'unifunc' => 'content_5eb9608c5906c8_13627278',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1747528f0df61e8d3e26fb9ce7fbf1151b75fbd1' => 
     array (
       0 => 'C:\\xampp\\htdocs\\project\\smarty\\templates\\profiel.tpl',
-      1 => 1588343388,
+      1 => 1589207179,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5eac327e5641a6_40230901 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5eb9608c5906c8_13627278 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +41,7 @@ function content_5eac327e5641a6_40230901 (Smarty_Internal_Template $_smarty_tpl)
 
 
             <div class="container-fluid" id="nav" >
-
+                <div id="extra"> 
                 <div class="row" id="nav1">
 
                     <ul >
@@ -102,6 +102,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_teller'] = $__section_teller_0_saved;
                         <div class="bar3"></div>
                     </div>
                 </div>
+                </div>
 
 
 
@@ -120,40 +121,13 @@ $_smarty_tpl->tpl_vars['__smarty_section_teller'] = $__section_teller_0_saved;
             <div class='row'>
                <div class='col-lg-12 col-sm-12'>
                 </div>
-                    <div class='col-lg-6 col-sm-12'>
+                    <div class='col-lg-12 col-sm-12'>
                     <div class='janee col-lg-12' id='profiel'>
                         <?php echo $_smarty_tpl->tpl_vars['inhoud']->value;?>
 
                     </div>
                      </div>
-                <?php
-$__section_teller_1_saved = isset($_smarty_tpl->tpl_vars['__smarty_section_teller']) ? $_smarty_tpl->tpl_vars['__smarty_section_teller'] : false;
-$__section_teller_1_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['menu']->value) ? count($_loop) : max(0, (int) $_loop));
-$__section_teller_1_total = $__section_teller_1_loop;
-$_smarty_tpl->tpl_vars['__smarty_section_teller'] = new Smarty_Variable(array());
-if ($__section_teller_1_total != 0) {
-for ($__section_teller_1_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_teller']->value['index'] = 0; $__section_teller_1_iteration <= $__section_teller_1_total; $__section_teller_1_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_teller']->value['index']++){
-?>
-
-                <?php if ($_smarty_tpl->tpl_vars['menu']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_teller']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_teller']->value['index'] : null)]['d_item'] == 'Aanpassen') {?>
-
-                <div class='col-lg-6 col-sm-12'>
-                    <div class='janee col-lg-12' id='profiel'>
-                        <a href="<?php echo $_smarty_tpl->tpl_vars['menu']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_teller']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_teller']->value['index'] : null)]['d_link'];?>
-"><?php echo $_smarty_tpl->tpl_vars['menu']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_teller']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_teller']->value['index'] : null)]['d_item'];?>
- <?php echo $_smarty_tpl->tpl_vars['producten']->value;?>
- </a>
-                    </div>
-                     </div>
-                    <?php }?>
-                    
-                    <?php
-}
-}
-if ($__section_teller_1_saved) {
-$_smarty_tpl->tpl_vars['__smarty_section_teller'] = $__section_teller_1_saved;
-}
-?>
+             
 
             </div>
 
@@ -183,12 +157,12 @@ $_smarty_tpl->tpl_vars['__smarty_section_teller'] = $__section_teller_1_saved;
 <!-- Footer -->
 
     <?php
-$__section_teller_2_saved = isset($_smarty_tpl->tpl_vars['__smarty_section_teller']) ? $_smarty_tpl->tpl_vars['__smarty_section_teller'] : false;
-$__section_teller_2_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['jsInclude']->value) ? count($_loop) : max(0, (int) $_loop));
-$__section_teller_2_total = $__section_teller_2_loop;
+$__section_teller_1_saved = isset($_smarty_tpl->tpl_vars['__smarty_section_teller']) ? $_smarty_tpl->tpl_vars['__smarty_section_teller'] : false;
+$__section_teller_1_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['jsInclude']->value) ? count($_loop) : max(0, (int) $_loop));
+$__section_teller_1_total = $__section_teller_1_loop;
 $_smarty_tpl->tpl_vars['__smarty_section_teller'] = new Smarty_Variable(array());
-if ($__section_teller_2_total != 0) {
-for ($__section_teller_2_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_teller']->value['index'] = 0; $__section_teller_2_iteration <= $__section_teller_2_total; $__section_teller_2_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_teller']->value['index']++){
+if ($__section_teller_1_total != 0) {
+for ($__section_teller_1_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_teller']->value['index'] = 0; $__section_teller_1_iteration <= $__section_teller_1_total; $__section_teller_1_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_teller']->value['index']++){
 ?>
     <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->tpl_vars['jsInclude']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_teller']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_teller']->value['index'] : null)];?>
@@ -197,8 +171,8 @@ for ($__section_teller_2_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section
     <?php
 }
 }
-if ($__section_teller_2_saved) {
-$_smarty_tpl->tpl_vars['__smarty_section_teller'] = $__section_teller_2_saved;
+if ($__section_teller_1_saved) {
+$_smarty_tpl->tpl_vars['__smarty_section_teller'] = $__section_teller_1_saved;
 }
 ?>
 

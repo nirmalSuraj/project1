@@ -48,7 +48,8 @@ $_error=(!isset($_GET['error'])?"":$_GET['error']);
 $_msg=(!isset($_GET['msg'])?"":$_GET['msg'] );
 
 
-
+if($_SESSION['rol'] != 2 && $_SESSION['rol'] == 1){
+    
 $_jsInclude=["../js/main.js",
              "../js/nav_regelen.js",
 
@@ -63,6 +64,24 @@ $_jsInclude=["../js/main.js",
              "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js",
              "../js/modal.js"
             ];
+    
+}else if($_SESSION['rol'] != 1 || $_SESSION['rol'] == null){
+    
+   
+    $_jsInclude=["../js/main.js",
+             "../js/nav_regelen.js",
+
+         
+             "../js/factuurNummer.js",
+             "../js/car.js",
+             "../js/submit.js",
+             "../js/copyright.js",
+             "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js",
+             "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js",
+             "../js/modal.js"
+            ];
+}
+
 
 
 //authorised();

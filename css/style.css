@@ -81,14 +81,28 @@ tr:nth-child(even) {
     background-color: #fff;
     transition: left 1s;
     z-index: 1;
-    top: 0px;
-    padding: 10px;
+    top: 1px;
+    padding: 0px;
+
+
+}
+#extra{
+    width: 100%;
+    background-color: #333;
+    transition: left 1s;
+    z-index: 1;
+    top: 1px;
+    padding: 1px;
+
+
 
 }
 
 #nav1{
     background-color: #333;
     transition:all 1s;
+    margin-top: 10px;
+
 
 
 }
@@ -164,11 +178,11 @@ ul li:hover{
 
 /*********form***********/
 .form label{
-    
-     clear: both;
-  float: left;
-  margin-right: 2em;
-  width: 130px;
+
+    clear: both;
+    float: left;
+    margin-right: 2em;
+    width: 130px;
 }
 .form{
     width: 50%;
@@ -181,8 +195,8 @@ ul li:hover{
 .form input[type=text],input[type=number],input[type=email],input[type=date],input[type=password]{
     width: 50%;
     float: left;
-  margin-bottom: 0.5em;
-  margin-right: 1em;
+    margin-bottom: 0.5em;
+    margin-right: 1em;
     padding: 5px;
     display: inline-block;
     border: 1px solid #ccc;
@@ -193,10 +207,10 @@ ul li:hover{
 
 }
 #gender, #postcode,#gemeente,#aanpreek,#date,#pass,#pass_rep,form #soort,#input,#btw,#stock{
-     width: 50%;
+    width: 50%;
     float: left;
-  margin-bottom: 0.5em;
-  margin-right: 1em;
+    margin-bottom: 0.5em;
+    margin-right: 1em;
     padding: 5px;
     display: inline-block;
     border: 1px solid #ccc;
@@ -204,6 +218,7 @@ ul li:hover{
     box-sizing: border-box;
     background-color: #333;
     color: #fff;
+    margin-top: 0;
 }
 
 
@@ -241,10 +256,10 @@ ul li:hover{
 
 
 .card {
-  box-shadow: 0 16px 16px 0 #333;
-  padding: 16px;
-  text-align: center;
-  background-color: #333;
+    box-shadow: 0 16px 16px 0 #333;
+    padding: 16px;
+    text-align: center;
+    background-color: #333;
     margin: 10px;
 }
 
@@ -269,7 +284,7 @@ ul li:hover{
 }
 .regisform{
     min-height: 100px;
-    
+
 }
 
 .loginForm{
@@ -458,9 +473,9 @@ ul li:hover{
 
 #footer{
     width: 100%;
-    
+
     margin-top:700px;
- 
+
     background-color: #333;
 }
 footer{
@@ -480,16 +495,27 @@ footer{
     color: #333;
 }
 #inhoud p{
-    
+
     text-align: center;
     color: #333;
 }
 
-#mnc{
+.profiel_button{
+    padding: 20px; 
+    width: 200px;
+    background-color: #fff;
+    margin: 10px;
+
+}
+#rbForm{
     width: 50%;
+    margin: auto auto;
+}
+#mnc{
+    width: 20%;
 
 }
 
 .clearfix {
-  clear: both;
+    clear: both;
 }

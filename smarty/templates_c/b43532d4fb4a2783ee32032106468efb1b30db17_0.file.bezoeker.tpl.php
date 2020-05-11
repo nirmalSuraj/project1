@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2020-05-01 16:30:02
+/* Smarty version 3.1.31, created on 2020-05-11 15:12:09
   from "C:\xampp\htdocs\project\smarty\templates\bezoeker.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5eac326aa92a74_37314255',
+  'unifunc' => 'content_5eb94f29dec457_82626180',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b43532d4fb4a2783ee32032106468efb1b30db17' => 
     array (
       0 => 'C:\\xampp\\htdocs\\project\\smarty\\templates\\bezoeker.tpl',
-      1 => 1588343377,
+      1 => 1589202479,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5eac326aa92a74_37314255 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5eb94f29dec457_82626180 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+  <head>
         <meta charset="UTF-8">
         <title>welkome</title>
 
@@ -38,10 +38,19 @@ function content_5eac326aa92a74_37314255 (Smarty_Internal_Template $_smarty_tpl)
   
 
 
+         
+
+
+
+
+
+                    <header>
+
+
 
 
             <div class="container-fluid" id="nav" >
-
+                <div id="extra"> 
                 <div class="row" id="nav1">
 
                     <ul >
@@ -67,12 +76,26 @@ $_smarty_tpl->tpl_vars['__smarty_section_teller'] = $__section_teller_0_saved;
 }
 ?>
 
+
                     </ul>
-                    
 
                 </div>
+                <div class="row">
+
+
+                    <div id="buggerbutton">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
                 </div>
-          
+
+
+
+            </div>
+            </div>
+
+        </header>
       
 
  <div class="container-fluid col-md-12" id="footer"  >

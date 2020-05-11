@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2020-05-01 20:04:33
+/* Smarty version 3.1.31, created on 2020-05-11 15:31:33
   from "C:\xampp\htdocs\project\smarty\templates\home_klant.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5eac64b17cf9d4_55355107',
+  'unifunc' => 'content_5eb953b5ad6a50_54352657',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a69675cc2ca21b6770a7986fdaa56212489d0f3f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\project\\smarty\\templates\\home_klant.tpl',
-      1 => 1588356272,
+      1 => 1589203878,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5eac64b17cf9d4_55355107 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5eb953b5ad6a50_54352657 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +41,7 @@ function content_5eac64b17cf9d4_55355107 (Smarty_Internal_Template $_smarty_tpl)
 
 
             <div class="container-fluid" id="nav" >
-
+                <div id="extra"> 
                 <div class="row" id="nav1">
 
                     <ul >
@@ -99,6 +99,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_teller'] = $__section_teller_0_saved;
                         <div class="bar2"></div>
                         <div class="bar3"></div>
                     </div>
+                </div>
                 </div>
 
 

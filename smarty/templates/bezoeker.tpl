@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+  <head>
         <meta charset="UTF-8">
         <title>welkome</title>
 
@@ -14,10 +14,19 @@
   
 
 
+         
+
+
+
+
+
+                    <header>
+
+
 
 
             <div class="container-fluid" id="nav" >
-
+                <div id="extra"> 
                 <div class="row" id="nav1">
 
                     <ul >
@@ -28,12 +37,26 @@
                         </li>
                         {/section}
 
+
                     </ul>
-                    
 
                 </div>
+                <div class="row">
+
+
+                    <div id="buggerbutton">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
                 </div>
-          
+
+
+
+            </div>
+            </div>
+
+        </header>
       
 
  <div class="container-fluid col-md-12" id="footer"  >

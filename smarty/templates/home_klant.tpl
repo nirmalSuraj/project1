@@ -17,7 +17,7 @@
 
 
             <div class="container-fluid" id="nav" >
-
+                <div id="extra"> 
                 <div class="row" id="nav1">
 
                     <ul >
@@ -57,6 +57,7 @@
                         <div class="bar2"></div>
                         <div class="bar3"></div>
                     </div>
+                </div>
                 </div>
 
 

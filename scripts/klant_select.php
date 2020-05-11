@@ -10,7 +10,7 @@ try{
 *
 * anders --> illegale toegang
 ***************************************************/
-    
+   
     if (! isset($_GET["actie"]))  // geen actie gedefinieerd
     {
         throw new Exception("illegal access");

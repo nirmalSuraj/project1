@@ -17,7 +17,7 @@
 
 
             <div class="container-fluid" id="nav" >
-
+                <div id="extra"> 
                 <div class="row" id="nav1">
 
                     <ul >
@@ -60,6 +60,7 @@
                         <div class="bar3"></div>
                     </div>
                 </div>
+                </div>
 
 
 
@@ -76,23 +77,12 @@
             <div class='row'>
                <div class='col-lg-12 col-sm-12'>
                 </div>
-                    <div class='col-lg-6 col-sm-12'>
+                    <div class='col-lg-12 col-sm-12'>
                     <div class='janee col-lg-12' id='profiel'>
                         {$inhoud}
                     </div>
                      </div>
-                {section name=teller loop=$menu}
-
-                {if  $menu[teller].d_item == 'Aanpassen'  }
-
-                <div class='col-lg-6 col-sm-12'>
-                    <div class='janee col-lg-12' id='profiel'>
-                        <a href="{$menu[teller].d_link}">{$menu[teller].d_item} {$producten} </a>
-                    </div>
-                     </div>
-                    {/if}
-                    
-                    {/section}
+             
 
             </div>
 
