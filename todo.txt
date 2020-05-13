@@ -1,3 +1,2 @@
-
--schrijf een script voor de foto van home_klant te wijzigen.
+--contact pagina maken
 --limte van  producten aanpassen

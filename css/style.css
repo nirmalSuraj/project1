@@ -516,6 +516,13 @@ footer{
 
 }
 
+/*error*/
+#errorfile{
+    overflow: auto;
+height: 300px;
+   
+}
+
 .clearfix {
     clear: both;
 }

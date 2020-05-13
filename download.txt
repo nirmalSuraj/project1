@@ -1,0 +1,10 @@
+header('Cache-Control:public');
+    header('Content-Description:File Transfer');
+    header('Content-Disposition:attachment;filename=../error/error.csv');
+
+    header('Content-type:application/zip');
+    header('Content-Tranfer-Encoding:binary');
+    readfile('../error/error.csv');
+    header("Location:error.php");
+
+fpdf
