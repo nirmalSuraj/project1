@@ -34,14 +34,14 @@ function upload_img($_img,$_extends,$_size){
               
                 return "$_nieuw_path-".true;
             }else{
-               return "bestan veel te groot";
+               Redirect::to("a_admin.php?error=img veel te groot");
             }
         }else{
-            //todo
+             Redirect::to("a_admin.php?error=Deze img kan niet gebruikt wroden");
         }
 
     }else{
-        //todo
+        Redirect::to("a_admin.php?error=Enkel png toegelaten");
     }
     
 
