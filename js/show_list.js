@@ -25,10 +25,12 @@ function list_car(){
       
 
             //hier elke button van een andere element uithalen 
-            let toevoegen=document.querySelectorAll(".toevoegen")
-            volgende.dataset.list = "delet";
+            let toevoegen=document.querySelectorAll(".toevoegen");
+            //volgende.dataset.list = "delet";
 
-       
+        let volgende=document.querySelector("#volgende");
+      
+                get_volgend(volgende);
 
             //lopen set data
             for(let i=0;i < toevoegen.length;i++){
@@ -50,6 +52,7 @@ function list_car(){
 
 
             }
+            
             afrekenen.dataset.list = "hide_afrekenen";
           
             koppen_en_elementen(toevoegen)

@@ -1,6 +1,6 @@
 <?php
  //controleren of dat user bestaat
-        $_query="select * from $_table where t_soort_d_index =?  LIMIT 20";
+        $_query="select * from $_table where t_soort_d_index =?  LIMIT 10";
         //voorbereiden 
         $_resul=$_PDO->prepare("$_query"); 
         //excuteren

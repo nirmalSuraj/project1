@@ -30,13 +30,12 @@ try{
         require "../php_lib/length_table.php";
         
         //als limit minder dan dan tabale length is dan  (limit heeft standard waarde van 10) 
-        
-        if($_POST['limit'] <= lenth_table('v_selectproducten',"d_index")){
             
+        if(lenth_table('v_selectproducten',"d_index") <= $_POST['limit'] ){
             
             require "../code/limit_van_produc.php";
            
-
+            
         }else{
             $_onder_limit=true;
 
@@ -44,7 +43,7 @@ try{
       // als minder $_onder_limit waarde dan is dan toon rest van de producten
         if($_onder_limit){
  // als de de limit niet boven de tien is dan is true
-            
+          
             require "../code/limit_van_produc.php";
             
            

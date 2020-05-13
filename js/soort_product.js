@@ -17,7 +17,7 @@ function submit(){
 
     //xml object aanmaken 
     let xml = new XMLHttpRequest()
-   
+
     xml.onload=()=>{
         // als satus is gelijk aan 200, resultaat toevoegen in  product
         if(xml.status == 200){
@@ -30,6 +30,7 @@ function submit(){
                 volgende=document.querySelector("#volgende");
           
             koppen_en_elementen(tovoegen)
+            
                 get_volgend(volgende);
           
 
@@ -50,8 +51,8 @@ function reset_waarde(){
     waarde=10;
 }
 
-
-sub.addEventListener("change",submit)
 sub.addEventListener("change",reset_waarde)
+sub.addEventListener("change",submit)
+
 addEventListener("load", submit);
 

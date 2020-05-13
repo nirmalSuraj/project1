@@ -1,6 +1,6 @@
 <?php
 //maak query om 10 producten te selecteren 
-            $_query="select * from $_table";
+            $_query="select * from $_table limit {$_POST['limit']}";
             //voorbereiden 
             $_resul=$_PDO->query("$_query"); 
             //zijn er producten?
