@@ -298,6 +298,7 @@ ul li:hover{
 
 .producten img{
     width: 50px;
+    height: 100px;
     margin:20px  50px;
 }
 .producten h2,.producten h1{

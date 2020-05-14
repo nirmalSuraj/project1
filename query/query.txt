@@ -114,3 +114,13 @@ JOIN t_rol on (us.t_rol_d_index=t_rol.d_index);
 INSERT INTO t_mnemonic (d_mnemonic,d_table)
 VALUES("Bedrijf","t_bedrijf"),("Aanspreektitel","t_aanspreektitel"),
 ("Gender","t_gender"),("Users","t_users")
+
+
+////////////////////////scripts//////////
+INSERT INTO t_authorised(d_script,d_0,d_1,d_2)
+VALUES("reset_check.php",0,1,1),
+("a_admin.php",0,0,1),
+("select.php",0,0,1),
+("toon.php",0,0,1),
+("verwijderen.php",0,0,1),
+("errors.php",0,0,1),

@@ -36,11 +36,11 @@ try{
 
 
             //controleren of dat user bestaat
-            $_query="select * from t_authentication where d_logon=?";
+            $_query="select * from t_authentication where d_logon=? and d_resetTime=?";
             //voorbereiden 
             $_resul=$_PDO->prepare("$_query"); 
             //excuteren
-            $_resul->execute([$_logon]);
+            $_resul->execute([$_logon,0]);
             if($_resul->rowCount() != 0){
 
                 while($_row=$_resul->fetch(PDO::FETCH_ASSOC)){
@@ -146,9 +146,9 @@ try{
 
 
             }else{
-                $_msg="Deze $_logon bestaat niet";
-                $_error=$_msg;
-                logSecurityInfo($_logon,$_msg);
+                $_error="Uw mail of wachtwoord klopt niet";
+                
+                logSecurityInfo($_logon,$_error);
             }
 
         }else{

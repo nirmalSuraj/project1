@@ -41,7 +41,10 @@ function upload_img($_img,$_extends,$_size){
         }
 
     }else{
-        Redirect::to("a_admin.php?error=Enkel png toegelaten");
+        if(!empty($_extend)){
+              Redirect::to("a_admin.php?error=Enkel png toegelaten");
+        }
+      
     }
     
 

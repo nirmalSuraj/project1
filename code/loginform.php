@@ -15,7 +15,7 @@ $_inhoud.="
     <label id='label'>Ingelogd blijven <input type='checkbox' name='persist' id='checkb'value='Ingelogd blijven' > </label>
      
    
-     <a href='#' id='pvg'>Paswoord vergeten</a>
+     <a href='../scripts/reset_pass.php?reset=1' id='pvg'>Paswoord vergeten</a>
      
 
 		<input name='login' id='submit' type='submit' value='login'>

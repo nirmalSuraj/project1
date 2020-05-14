@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2020-05-11 15:31:36
+/* Smarty version 3.1.31, created on 2020-05-14 16:27:36
   from "C:\xampp\htdocs\project\smarty\templates\shoppen_klant.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5eb953b8ea34a4_44623806',
+  'unifunc' => 'content_5ebd55580fa515_85274115',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6a398b236bd2921f6cbc4fce9dbb9d1b47cacdca' => 
     array (
       0 => 'C:\\xampp\\htdocs\\project\\smarty\\templates\\shoppen_klant.tpl',
-      1 => 1589203891,
+      1 => 1589466452,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5eb953b8ea34a4_44623806 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ebd55580fa515_85274115 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,6 +33,7 @@ function content_5eb953b8ea34a4_44623806 (Smarty_Internal_Template $_smarty_tpl)
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
     </head>
     <body>
 

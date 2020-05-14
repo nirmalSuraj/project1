@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 13 mei 2020 om 12:54
+-- Gegenereerd op: 14 mei 2020 om 18:42
 -- Serverversie: 10.1.21-MariaDB
 -- PHP-versie: 5.6.30
 
@@ -93,9 +93,9 @@ INSERT INTO `t_authorised` (`d_index`, `d_script`, `d_0`, `d_1`, `d_2`) VALUES
 (2, 'bezoeker.php', 1, 1, 1),
 (3, 'car.php', 0, 1, 0),
 (4, 'check_table.php', 0, 1, 0),
-(5, 'factuur.php', 0, 1, 0),
+(5, 'factuur.php', 0, 1, 1),
 (6, 'home_klant.php', 0, 1, 0),
-(7, 'klant_data_aanpassen.php', 0, 1, 0),
+(7, 'klant_data_aanpassen.php', 0, 1, 1),
 (8, 'klant_profiel.php', 0, 1, 0),
 (9, 'login.php', 1, 1, 1),
 (10, 'resgisteren.php', 1, 1, 1),
@@ -106,7 +106,17 @@ INSERT INTO `t_authorised` (`d_index`, `d_script`, `d_0`, `d_1`, `d_2`) VALUES
 (15, 'bedrijf_regis.php', 0, 1, 0),
 (16, 'klant_select.php', 0, 1, 0),
 (17, 'logout.php', 0, 1, 1),
-(18, 'home_admin.php', 0, 0, 1);
+(18, 'home_admin.php', 0, 0, 1),
+(19, 'aanpassen.php', 0, 1, 1),
+(20, 'a_admin.php', 0, 0, 1),
+(21, 'select.php', 0, 0, 1),
+(22, 'toon.php', 0, 0, 1),
+(23, 'verwijderen.php', 0, 0, 1),
+(24, 'errors.php', 0, 0, 1),
+(25, 'modal.php', 0, 0, 1),
+(26, 'reset_pass.php', 1, 1, 1),
+(27, 'reset_check.php', 1, 1, 1),
+(28, 'contact.php', 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -201,7 +211,11 @@ INSERT INTO `t_factuur` (`d_index`, `t_users_d_index`, `d_productNaam`, `d_prijs
 (75, 1, 'Tomaten', '3', '2020-04-29', '6%', 'kg', 2, 1, 'fk1639m111'),
 (76, 1, 'Prei', '2.5', '2020-04-29', '6%', 'ps', 3, 1, 'fk1639m111'),
 (77, 1, 'Tomaten', '3', '2020-05-01', '6%', 'kg', 2, 2, 'fk1343n41'),
-(78, 1, 'Prei', '2.5', '2020-05-01', '6%', 'ps', 3, 1, 'fk1343n41');
+(78, 1, 'Prei', '2.5', '2020-05-01', '6%', 'ps', 3, 1, 'fk1343n41'),
+(79, 1, 'Appel', '2.5', '2020-05-14', '6%', 'kg', 9, 4, 'fk1139o91'),
+(80, 1, 'Melk', '2', '2020-05-14', '6%', 'ps', 15, 4, 'fk1139o91'),
+(81, 1, 'Suraj', '5', '2020-05-14', '12%', 'kg', 8, 4, 'fk1139o91'),
+(82, 1, 'stink kaas', '30', '2020-05-14', '12%', 'ps', 14, 5, 'fk1139o91');
 
 -- --------------------------------------------------------
 
@@ -1871,7 +1885,11 @@ INSERT INTO `t_menu` (`d_index`, `d_item`, `d_link`, `d_volgorde`, `d_menu`, `d_
 (66, 'qsd', NULL, NULL, NULL, NULL, NULL, NULL, 0, 0),
 (67, NULL, 'sdqqs', NULL, NULL, NULL, NULL, NULL, 0, 0),
 (68, NULL, 'qsddqs', NULL, NULL, NULL, NULL, NULL, 0, 0),
-(69, 'Verwijderen', 'errors.php?reset=go', 3, 6, 0, 0, 1, 0, 0);
+(69, 'Verwijderen', 'errors.php?reset=go', 3, 6, 0, 0, 1, 0, 0),
+(70, 'Contact', 'contact.php', 10, 0, 1, 1, 0, 0, 0),
+(71, 'Contact', 'contact.php', 3, 2, 1, 1, 0, 0, 0),
+(72, 'Contact', 'contact.php', 5, 3, 1, 1, 0, 0, 0),
+(73, 'Contact', 'contact.php', 10, 1, 1, NULL, NULL, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1942,7 +1960,14 @@ INSERT INTO `t_producten` (`d_index`, `d_productNaam`, `d_img`, `d_prijs`, `d_ps
 (1, 'Mango', '../img/FTa0j16.png', 3, 'ps', 'Afrika', 2, 2, 1),
 (2, 'Tomaten', '../img/tomaat.jpg', 2, 'kg', 'Bel', 3, 2, 50),
 (3, 'Prei', '../img/prei.jpg', 4, 'ps', 'bel', 3, 2, 10),
-(8, 'Suraj', '../img/FTi16n2.png', 5, 'kg', 'dit is een test2', 1, 3, 10);
+(8, 'Suraj', '../img/FTi16n2.png', 5, 'kg', 'dit is een test2', 1, 3, 6),
+(9, 'Appel', '../img/FTl11e16.png', 2.5, 'kg', 'zoete appels ', 2, 2, 6),
+(10, 'Visstick', '../img/FTn12h14.png', 5, 'ps', 'iglo', 6, 3, 50),
+(11, 'Pot test', '../img/FTf3m8.png', 35, 'ps', 'Metaal , 2 l', 4, 4, 20),
+(12, 'Mes', '../img/FTd5g11.png', 3, 'ps', 'millennium', 5, 4, 30),
+(13, 'Pan', '../img/FTf2c12.png', 40, 'ps', 'millennium', 7, 4, 5),
+(14, 'stink kaas', '../img/FTd13d5.png', 30, 'ps', 'stink-kaas, bel', 8, 3, 25),
+(15, 'Melk', '../img/FTa2m2.png', 2, 'ps', 'Volle Melk', 8, 2, 16);
 
 -- --------------------------------------------------------
 
@@ -1985,7 +2010,11 @@ INSERT INTO `t_soort` (`d_index`, `d_soorNaam`) VALUES
 (1, 'Alle Producten'),
 (2, 'Fruit'),
 (3, 'Groeten'),
-(4, 'pan');
+(4, 'Potten'),
+(5, 'Bestekken'),
+(6, 'Diepvriesproducte'),
+(7, 'Pannen'),
+(8, 'Zuivel');
 
 -- --------------------------------------------------------
 
@@ -2260,7 +2289,7 @@ ALTER TABLE `t_users`
 -- AUTO_INCREMENT voor een tabel `t_authorised`
 --
 ALTER TABLE `t_authorised`
-  MODIFY `d_index` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `d_index` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT voor een tabel `t_bedrijf`
 --
@@ -2275,7 +2304,7 @@ ALTER TABLE `t_btw`
 -- AUTO_INCREMENT voor een tabel `t_factuur`
 --
 ALTER TABLE `t_factuur`
-  MODIFY `d_index` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `d_index` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
 --
 -- AUTO_INCREMENT voor een tabel `t_gemeente`
 --
@@ -2285,7 +2314,7 @@ ALTER TABLE `t_gemeente`
 -- AUTO_INCREMENT voor een tabel `t_menu`
 --
 ALTER TABLE `t_menu`
-  MODIFY `d_index` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
+  MODIFY `d_index` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 --
 -- AUTO_INCREMENT voor een tabel `t_mnemonic`
 --
@@ -2300,12 +2329,12 @@ ALTER TABLE `t_mnemonic_user`
 -- AUTO_INCREMENT voor een tabel `t_producten`
 --
 ALTER TABLE `t_producten`
-  MODIFY `d_index` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `d_index` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT voor een tabel `t_soort`
 --
 ALTER TABLE `t_soort`
-  MODIFY `d_index` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `d_index` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT voor een tabel `t_users`
 --
