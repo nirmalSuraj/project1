@@ -6,7 +6,7 @@ try{
     require "../code/session_uitpakken.php";
     //pagina die wij gaan tonen aan klant
 
-    $_tpl=($_rol == null?"home.tpl":"shoppen_klant.tpl");
+    $_tpl="home.tpl";
 
     if(isset($_POST['send'])){
         //aanmaken van new validatie object
@@ -59,7 +59,7 @@ require("../php_lib/sendMail.inc.php");
   ";
 
 
-    $_menu=($_rol == null? 2:3);
+    $_menu=($_rol == null? 7:3);
     // output voor html
     require("../code/output.inc.php");   
 

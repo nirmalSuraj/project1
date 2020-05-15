@@ -21,11 +21,28 @@
                 <div class="row" id="nav1">
 
                     <ul >
-
                         {section name=teller loop=$menu}
-                        <li><a href="{$menu[teller].d_link}">{$menu[teller].d_item}
+
+                        {if $menu[teller].d_item eq 'fa fa-shopping-cart'  }
+                        <li> <a href="{$menu[teller].d_link}"><i class="fa fa-shopping-cart" id="carclick" style="font-size:px; color:#fff; padding: 0px;"></i></a></li>
+
+                        {/if}
+
+                        {if $menu[teller].d_item eq 'fa fa-home'  }
+                        <li> <a href="{$menu[teller].d_link}"><i class="{$menu[teller].d_item}"  style="font-size:24px; color:#fff; padding: 0px;"></i></a></li>
+
+                        {/if}
+
+                        {if $menu[teller].d_item != 'fa fa-shopping-cart' and $menu[teller].d_item != 'fa fa-home' and $menu[teller].d_item != 'Afrekenen' and $menu[teller].d_item != 'Aanpassen'   }
+
+                        <li><a href="{$menu[teller].d_link}" >{$menu[teller].d_item}
                             </a>
+
                         </li>
+
+                        {/if}
+
+
                         {/section}
 
 
@@ -41,14 +58,13 @@
                         <div class="bar3"></div>
                     </div>
                 </div>
-                </div>
 
 
 
             </div>
+            </div>
 
         </header>
-
         <div class="container" id="container"> 
 
             <div class="p-3 mb-2 bg-success hidemsg text-white" id='msg' >{$msg}</div>
