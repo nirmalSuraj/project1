@@ -8,10 +8,11 @@
 if( $_create_table  == "v_full_gegevens_users"){
     $_inhoud.= "
 
- <tr> <td>
+
+ <tr class='tr_td'> <td class='tr_td'>
   ". 
         $_row['d_voornaam']." ".
-        $_row['d_naam'] ."</td><td>
+        $_row['d_naam'] ."</td><td class='td-btn'>
            <input type='hidden'  value='{$_row['d_index']}'>
            <input type='button' class='toevoegen btnmodal' data-toggle='modal' data-target='#myModal' value='Meer info' ></td><tr>
 
@@ -21,23 +22,26 @@ if( $_create_table  == "v_full_gegevens_users"){
 }
 
 
-if( $_create_table == "v_selectproducten"){
-    $_inhoud.= "
+if( $_create_table == "v_selectproducten"  ){
+    
+    
+        $_inhoud.= "
 
- <tr> <td>
+ <tr class='tr_td'> <td class='tr_td'>
   ". 
         $_row['d_voornaam']." ".
-        $_row['d_productNaam']."</td><td>
+        $_row['d_productNaam']."</td><td class='td-btn'>
            <input type='hidden'  value='{$_row['d_index']}'>
-           <input type='button' class='toevoegen btnmodal' data-toggle='modal' data-target='#myModal' value='Meer info' ></td><tr>
+           <input type='button' class='toevoegen btnmodal btn-list' data-toggle='modal' data-target='#myModal' value='Meer info' ></td><tr>
 
 
         ";
+    
 
 }
 
 
-if($_create_table=="t_soort"){
+if($_create_table=="t_soort" && $_row["d_soorNaam"] != "Alle Producten"){
     if($_SESSION["actie"] == 7){
         $_inhoud.= "
 
@@ -49,8 +53,9 @@ if($_create_table=="t_soort"){
     }else if($_SESSION["actie"] == 8){
         $_inhoud.= "
 
- <tr> <td>
-  ". $_row['d_soorNaam']."</td><td>
+ 
+ <tr class='tr_td'> <td class='tr_td'>
+  ". $_row['d_soorNaam']."</td><td class='td-btn'>
          <form  method='post' id='form' action='aanpassen.php'>
            <input type='hidden'  name='index' value='{$_row['d_index']}'>
            <input type='submit' class='toevoegen btnmodal'  value='Aanpssen' ></td><tr>
@@ -60,8 +65,9 @@ if($_create_table=="t_soort"){
     }else{
         $_inhoud.= "
 
- <tr> <td>
-  ". $_row['d_soorNaam']."</td><td>
+
+ <tr class='tr_td'> <td class='tr_td'>
+  ". $_row['d_soorNaam']."</td><td class='td-btn'>
          <form  method='post' id='form' action='verwijderen.php'>
            <input type='hidden'  name='index' value='{$_row['d_index']}'>
            <input type='submit' class='toevoegen btnmodal'  name='verwijder' value='verwijderen' ></td><tr>

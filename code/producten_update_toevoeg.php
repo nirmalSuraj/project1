@@ -1,7 +1,7 @@
 <?php
 $_inhoud= "
    <div class='col-lg-6 col-sm-12  form'>
-   <h1>Aanpassen producten</h1>
+   <h1>{$_SESSION['h1']}</h1>
     <form  method='post' id='form' action='$_srv' enctype='multipart/form-data'>
     <fieldset>
      <label>img</label>
@@ -31,7 +31,7 @@ $_inhoud= "
     <input type='text' name='beschrijv' value='{$_row['d_beschrijving']}'>
     </fieldset>
          <button class='janee' ><a href='a_admin.php'>Back</a></button>
-		<input name='aanpassen' id='submit' type='submit' value='Aanpassen'>
+		<input name='aanpassen' id='submit' type='submit' value='{$_SESSION['h1']}'>
 
     </form>
 

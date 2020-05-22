@@ -12,20 +12,20 @@
        $_inhoud.="<label >Aanspreekvorm</label>";
 		$_inhoud.= dropDown("aanpreek","t_aanspreektitel","d_index","d_aanspreekTitel",$_start=0);
     $_inhoud.="<label>Naam</label>
-    <input type='text' name='naam' value='{$_POST['naam']}' >
+    <input type='text' name='naam' value='{$_POST['naam']}' required>
     <label >Voornaam</label>
-    <input type='text' name='voornaam' value='{$_POST['voornaam']}' >
+    <input type='text' name='voornaam' value='{$_POST['voornaam']}' required>
      <label >Geboortedatum</label>
-    <input type='date' name='geboortedatum' id='date'>
+    <input type='date' name='geboortedatum' id='date' required>
 		<label >Gender</label>";
 		$_inhoud.= dropDown("gender","t_gender","d_index","d_sex",$_start=0);
 		
 		$_inhoud.=" 
 
     <label >Straat</label>
-    <input type='text' name='straat' value='{$_POST['straat']}' >
+    <input type='text' name='straat' value='{$_POST['straat']}' required>
     <label >Nr</label>
-    <input type='text' name='nr' value='{$_POST['nr']}'  >
+    <input type='text' name='nr' value='{$_POST['nr']}'  required>
     <label >Postcode</label>
    ";
    $_inhoud.= dropDown("postcode","t_gemeente","d_postcode","d_postcode",$_start=0);
@@ -34,13 +34,13 @@
     ".dropDown("gemeente","t_gemeente","d_gemeentenaam","d_gemeentenaam",$_start=0)
     ."
      <label >telefoon</label>
-   	<input type='text' name='tel' size='10' value='{$_POST['tel']}'  placeholder='03/....'>
+   	<input type='text' name='tel' size='10' value='{$_POST['tel']}'  placeholder='03/....'  required>
  	  <label>E-mail</label>
-    <input type='text' name='mail' value='{$_POST['mail']}' > 
+    <input type='text' name='mail' value='{$_POST['mail']}' required> 
      <label>Paswoord</label>
     <input type='password' name='paswoord'  id='pass' >
      <label>Herhaal uw paswoord</label>
-    <input type='password' name='her_paswoord' id='pass_rep' > 
+    <input type='password' name='her_paswoord' id='pass_rep' required > 
     </fieldset>
 		<input name='registeren' id='submit' type='submit' value='verzenden'>
         

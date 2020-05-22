@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2020-05-15 09:03:04
+/* Smarty version 3.1.31, created on 2020-05-20 12:01:30
   from "C:\xampp\htdocs\project\smarty\templates\home.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5ebe3ea8799428_10719303',
+  'unifunc' => 'content_5ec4fffad82ea8_20509059',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b9d7480da43320f5458682d0e1ae84e590bd3081' => 
     array (
       0 => 'C:\\xampp\\htdocs\\project\\smarty\\templates\\home.tpl',
-      1 => 1589526180,
+      1 => 1589968889,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ebe3ea8799428_10719303 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ec4fffad82ea8_20509059 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,6 +32,7 @@ function content_5ebe3ea8799428_10719303 (Smarty_Internal_Template $_smarty_tpl)
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     </head>
     <body>
 
@@ -42,6 +43,10 @@ function content_5ebe3ea8799428_10719303 (Smarty_Internal_Template $_smarty_tpl)
 
             <div class="container-fluid" id="nav" >
                 <div id="extra"> 
+                 <div id="logo">
+                           <a href="login.php">WP
+                            </a>
+                        </div>
                 <div class="row" id="nav1">
 
                     <ul >

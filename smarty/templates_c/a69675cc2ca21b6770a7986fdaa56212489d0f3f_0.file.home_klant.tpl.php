@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2020-05-11 15:31:33
+/* Smarty version 3.1.31, created on 2020-05-20 12:08:06
   from "C:\xampp\htdocs\project\smarty\templates\home_klant.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5eb953b5ad6a50_54352657',
+  'unifunc' => 'content_5ec5018637d935_09141879',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a69675cc2ca21b6770a7986fdaa56212489d0f3f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\project\\smarty\\templates\\home_klant.tpl',
-      1 => 1589203878,
+      1 => 1589969285,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5eb953b5ad6a50_54352657 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ec5018637d935_09141879 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,6 +32,7 @@ function content_5eb953b5ad6a50_54352657 (Smarty_Internal_Template $_smarty_tpl)
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     </head>
     <body>
 
@@ -42,7 +43,12 @@ function content_5eb953b5ad6a50_54352657 (Smarty_Internal_Template $_smarty_tpl)
 
             <div class="container-fluid" id="nav" >
                 <div id="extra"> 
+                <div id="logo">
+                           <a href="home_klant.php">WP
+                            </a>
+                        </div>
                 <div class="row" id="nav1">
+                     
 
                     <ul >
                         <?php

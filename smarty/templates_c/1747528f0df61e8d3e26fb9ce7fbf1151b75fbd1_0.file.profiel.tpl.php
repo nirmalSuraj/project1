@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2020-05-11 16:26:20
+/* Smarty version 3.1.31, created on 2020-05-22 08:05:55
   from "C:\xampp\htdocs\project\smarty\templates\profiel.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5eb9608c5906c8_13627278',
+  'unifunc' => 'content_5ec76bc3c689f6_10457074',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1747528f0df61e8d3e26fb9ce7fbf1151b75fbd1' => 
     array (
       0 => 'C:\\xampp\\htdocs\\project\\smarty\\templates\\profiel.tpl',
-      1 => 1589207179,
+      1 => 1589970143,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5eb9608c5906c8_13627278 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ec76bc3c689f6_10457074 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,6 +32,7 @@ function content_5eb9608c5906c8_13627278 (Smarty_Internal_Template $_smarty_tpl)
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+           <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     </head>
     <body>
 
@@ -42,6 +43,10 @@ function content_5eb9608c5906c8_13627278 (Smarty_Internal_Template $_smarty_tpl)
 
             <div class="container-fluid" id="nav" >
                 <div id="extra"> 
+                <div id="logo">
+                           <a href="home_klant.php">WP
+                            </a>
+                        </div>
                 <div class="row" id="nav1">
 
                     <ul >

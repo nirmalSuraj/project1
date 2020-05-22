@@ -8,10 +8,10 @@ $_inhoud.="
     <fieldset>
    
      <label>Gebruikers naam</label>
-    <input type='text' name='logon' value='{$_POST['logon']}' >
+    <input type='text' name='logon' value='{$_POST['logon']}' required >
    
      <label>paswoord</label>
-    <input type='password' name='paswoord' id='pass' >
+    <input type='password' name='paswoord' id='pass' required minlength='8'>
     <label id='label'>Ingelogd blijven <input type='checkbox' name='persist' id='checkb'value='Ingelogd blijven' > </label>
      
    

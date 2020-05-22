@@ -27,8 +27,9 @@ function nav(){
         buggerbutton.style.display="inline-block";
 
         link.classList.add("hide"); 
+        link.style.top="5px";
         ul.style.display="block";
-        ul.style.paddingTop="25px";
+        ul.style.paddingTop="100px";
 
 
 

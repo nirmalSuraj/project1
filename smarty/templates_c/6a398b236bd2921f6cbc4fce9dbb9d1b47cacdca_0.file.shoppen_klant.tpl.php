@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2020-05-14 16:27:36
+/* Smarty version 3.1.31, created on 2020-05-20 12:06:51
   from "C:\xampp\htdocs\project\smarty\templates\shoppen_klant.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5ebd55580fa515_85274115',
+  'unifunc' => 'content_5ec5013bc7cfa1_33626113',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6a398b236bd2921f6cbc4fce9dbb9d1b47cacdca' => 
     array (
       0 => 'C:\\xampp\\htdocs\\project\\smarty\\templates\\shoppen_klant.tpl',
-      1 => 1589466452,
+      1 => 1589969210,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ebd55580fa515_85274115 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ec5013bc7cfa1_33626113 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,6 +33,7 @@ function content_5ebd55580fa515_85274115 (Smarty_Internal_Template $_smarty_tpl)
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+          <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     
     </head>
     <body>
@@ -44,6 +45,10 @@ function content_5ebd55580fa515_85274115 (Smarty_Internal_Template $_smarty_tpl)
 
             <div class="container-fluid" id="nav" >
                 <div id="extra"> 
+                 <div id="logo">
+                           <a href="home_klant.php">WP
+                            </a>
+                        </div>
                 <div class="row" id="nav1">
 
                     <ul >

@@ -44,6 +44,7 @@ try{
 
         case 8: // aanpassen
             $_srv= "../scripts/toon.php";
+            $_SESSION['h1']="aanpassen";
             if($_SESSION['tabelIndex'] == "t_factuur"){
                 Redirect::to("a_admin.php?error=t_factuur kan niet aangepast worden");
 
@@ -54,6 +55,7 @@ try{
 
         case 9: // toevoegen 
             $_srv= "../scripts/a_toevoegen.php";
+            $_SESSION['h1']="toevoegen";
             if($_SESSION['tabelIndex'] == "v_full_gegevens_users"){
                 Redirect::to("a_admin.php?error=leden toevoegen  is niet moegelijk");
 
@@ -107,7 +109,7 @@ try{
         require("../code/soort_update_toevoegen.php");
     }
     
-    $_inhoud.="<button><a href='a_admin.php' class='janee'>Back</a></button>
+    $_inhoud.="
      </form>
     </div>";
 

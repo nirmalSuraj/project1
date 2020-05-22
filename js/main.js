@@ -8,29 +8,6 @@ let print=document.querySelector("#print"),
 
 
 
-/* functie error's of msg doorsturen naar php script*/
-/*function msg_f(soort,script,waarde){
-
-    let xml=new XMLHttpRequest();
-    let teller=0;
-
-    xml.open("GET",`../scripts/${script}`,true)
-
-    xml.send(`${soort}=${waarde}`)
-   
-    xml.onload=()=>{
-        if(xml.status == 200){
-           return true;
-        }else if(xml.status == 404){
-            console.log("pagina niet gevonden");
-        }
-
-    }
-
-}*/
-
-console.log(error.innerHTML)
-////////communicatie
 if(tussen.innerHTML != ""){
 
     tussen.classList.remove("hidemsg");
@@ -52,7 +29,7 @@ addEventListener("click",()=>{
 function prin(){
     window.print()
 
-}
+}   
 
 print.addEventListener("click",prin);
 

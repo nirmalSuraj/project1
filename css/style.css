@@ -26,6 +26,26 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+
+#list_data{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 30%;
+    margin: auto auto;
+}
+
+.tr_td{
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+table .btn-list{
+    width: 100px;
+}
+.td-btn{
+    width: 100px;
+}
+
 /*************************************************/
 
 #container{
@@ -37,13 +57,35 @@ tr:nth-child(even) {
 
 }
 
+/*logo*/
+#logo{
+    width: 100px;
+    height: 50px;
+    margin:auto auto;
+    background-color: #fff;
+    line-height: 50px;
+    border-radius: 100%;
+    font-family: 'Dancing Script', cursive;
+
+}
+#logo a{
+    padding: 20px;
+    color: #333;
+    text-decoration: none;
+     font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+
+
+}
+
 /************burgger button*********************/
 
 #buggerbutton {
 
     display: none;
     cursor: pointer;
-    margin-left: 10px;
+    margin-left: 50px;
+    margin-top: -50px;
 }
 
 .bar1, .bar2, .bar3 {
@@ -101,7 +143,7 @@ tr:nth-child(even) {
 #nav1{
     background-color: #333;
     transition:all 1s;
-    margin-top: 10px;
+    margin-top: 0px;
 
 
 
@@ -206,7 +248,7 @@ ul li:hover{
     color: #fff;
 
 }
-#gender, #postcode,#gemeente,#aanpreek,#date,#pass,#pass_rep,form #soort,#input,#btw,#stock{
+#gender, #postcode,#gemeente,#aanpreek,#date,#pass,#pass_rep,form #soort,#input,#btw,#stock,#geboortedtm{
     width: 50%;
     float: left;
     margin-bottom: 0.5em;
@@ -297,9 +339,10 @@ ul li:hover{
 }
 
 .producten img{
-    width: 50px;
-    height: 100px;
-    margin:20px  50px;
+    width: 100%;
+    height: 200px;
+    margin:20px auto;
+  
 }
 .producten h2,.producten h1{
     text-align: center;
@@ -354,6 +397,7 @@ ul li:hover{
     width: 100%;
     margin-top: 50px;
     color: aliceblue;
+    z-index: 1;
 }
 /****************************startpagina*************************************************/
 
@@ -449,8 +493,9 @@ ul li:hover{
     left:0px;
 }
 .showmsg{
-    top:80px;
+    top:100px;
     left:0px;
+    z-index: 0;
 }
 
 /****************profiel***************/
@@ -520,8 +565,8 @@ footer{
 /*error*/
 #errorfile{
     overflow: auto;
-height: 300px;
-   
+    height: 300px;
+
 }
 
 .clearfix {

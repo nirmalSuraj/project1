@@ -29,28 +29,33 @@ try{
         if($_valideren->check()){
 require("../php_lib/sendMail.inc.php");
             sendMail ("test",$_POST['onderwerp'],$_POST['mail'],$_header="");
+             $_inhoud=" 
+    <div class='col-md-7 col-sm-12 regisform form bg-Success' >
+    <h1>Mail Verzonden</h1>
+     <button class='janee' value='Home'  > <a href='".($_rol != 1?"../scripts/login.php":"../scripts/home_klant.php")."'> Terug</button>
+    
+     </div>";
 
         }else{
             Redirect::to("$_srv?error=".$_valideren->errorValidate()."");
         }
-    }
-
-    $_inhoud=" 
+    }else{
+         $_inhoud=" 
     <div class='col-md-7 col-sm-12 regisform form' >
     <form  method='post'  id='form' action='$_srv'>
    <h1>Contact</h1>
    <label >Naam</label>
-    <input type='text' name='naam' value='{$_POST['voornaam']}' >
+    <input type='text' name='naam' value='{$_POST['voornaam']}' required>
      <label>U-mail</label>
 
-    <input type='text' name='mail'> 
+    <input type='text' name='mail' required> 
        <label>Onderwerp</label>
 
-    <input type='text' name='onderwerp'>
+    <input type='text' name='onderwerp' required minlength='8'>
     <br><br><br><br>
     <br><br><br><br>
 
-   <textarea name='editor1' id='editor1' rows='12' cols='80'>
+   <textarea name='editor1' id='editor1' rows='12' cols='80' required>
 
   </textarea>
   <input type='submit' name='send' id='submit'>
@@ -58,6 +63,10 @@ require("../php_lib/sendMail.inc.php");
   </div>
   ";
 
+        
+    }
+
+   
 
     $_menu=($_rol == null? 7:3);
     // output voor html

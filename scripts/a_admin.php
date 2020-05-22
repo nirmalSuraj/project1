@@ -20,6 +20,7 @@ try{
             while($_row=$_resul->fetch(PDO::FETCH_ASSOC)){
                 //keuze
                 $_gekozen=$_row['d_mnemonic'];
+                $_SESSION["gekozen"]=$_row['d_mnemonic'];
                 //deze session gaan wij straks gebruiken voor gegevens te verwerken
                 $_SESSION['tabelIndex']=$_row['d_table'];
             }

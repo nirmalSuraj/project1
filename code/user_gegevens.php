@@ -16,7 +16,7 @@ $_aanspreek=get_val_data("d_aanspreekTitel","v_full_gegevens_users","d_index",$_
     ";
        $_inhoud.="<label >Huidige aanspreekvorm</label>
         <input type='text' name='old_aans' value='$_aanspreek' readonly >
-        <label >Aanpassen</label>
+        <label >Aanpassen aanspreekvorm</label>
        ";
 		$_inhoud.= dropDown("aanpreek","t_aanspreektitel","d_index","d_aanspreekTitel",$_start=0);
     $_inhoud.="<label>Naam</label>
@@ -24,7 +24,7 @@ $_aanspreek=get_val_data("d_aanspreekTitel","v_full_gegevens_users","d_index",$_
     <label >Voornaam</label>
     <input type='text' name='voornaam' value='{$_row['d_voornaam']}' >
      <label >Geboortedatum</label>
-    <input type='date' name='geboortedatum' value='{$_row['d_geboortedatum']}'>
+    <input type='date' id='geboortedtm' name='geboortedatum' value='{$_row['d_geboortedatum']}'>
 		<label >Gender </label>
      <input type='text' name='old_gen' value='$_gender' readonly >
      <label >Aanpas gender </label>

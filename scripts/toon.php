@@ -29,12 +29,16 @@ try{
     // verwerk het resultaat van de query		
     if ($_result -> rowCount() > 0)
     {
-        $_inhoud="  <div class='col-md-12'><table>";
+        $_inhoud="  <div class='col-md-12 border' >
+        <h1>Lijst van {$_SESSION["gekozen"]} </h1>
+        <table id='list_data'>";
         while ($_row = $_result -> fetch(PDO::FETCH_ASSOC)) 
         {
-   
+             
+                 require("../code/toonData.inc.php");  
+              
            
-                require("../code/toonData.inc.php"); 
+                
             
 
 
