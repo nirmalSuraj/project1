@@ -28,6 +28,12 @@ try{
             for($_i =0; $_i < count($_ar); $_i++ ){
                 $_holder+= $_ar[$_i];
             }
+    
+            if(count($_ar) == 0){
+                echo 0;
+                return;
+            }
+    
             echo $_holder;
 
 

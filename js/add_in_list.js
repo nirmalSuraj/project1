@@ -1,5 +1,6 @@
 
 (function(){})()
+let timer_active;
 let carN=document.querySelector("#carclick");
 //knoppen
 
@@ -65,7 +66,7 @@ function style_buttons(e){
         //addEventListener
         evnlist(minknop,aantal,plusknop,id,"check",button)
 
-
+in_car()
     }
 
 
@@ -252,9 +253,10 @@ function check_table(id){
 }
 
 function in_car(){
-    setTimeout(in_car,50)
+    
+    let start=(timer_active == 0?"":setTimeout(in_car,100))
     let xml=new XMLHttpRequest();
-
+ console.log(timer_active)
 
     xml.open("POST","../scripts/car.php",true)
     xml.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -262,7 +264,8 @@ function in_car(){
 
     xml.onload=()=>{
         if(xml.status == 200){
-
+             timer_active=xml.response;
+           
             carN.innerHTML=" €"+xml.response;
         }
 
@@ -314,6 +317,7 @@ function hulp_aftellen(aantal,id,button,minknop,plusknop){
 
 
 
+
 function evnlist(minknop,aantal,plusknop,id,type,button){
     //aantal.addEventListener("",toevoegen_list);
     aantal.addEventListener("blur",blur);
@@ -328,6 +332,8 @@ function evnlist(minknop,aantal,plusknop,id,type,button){
     add_in_list(aantal,id,type,button);
 }
 
+
+addEventListener("click",in_car)
 addEventListener("load",in_car)
 
 
