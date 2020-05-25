@@ -252,7 +252,7 @@ function check_table(id){
 }
 
 function in_car(){
-    setTimeout(in_car,100)
+    setTimeout(in_car,50)
     let xml=new XMLHttpRequest();
 
 

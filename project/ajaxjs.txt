@@ -1,0 +1,35 @@
+
+function fetch(){
+  timer(fetch)
+        alle waarde eruihalen door subling of parent
+        
+   xml=new xml
+    
+     if(xml.satus == 200){
+            innerHtml
+          }   
+
+   xml.open(POST,srv,true)
+ xml.requist
+xml.send(naar een var ) 
+
+}
+
+fetch()
+
+function toevoegen(){
+   
+       var button
+       var data=button.subling 
+
+     if(staus == 200){}else if(staus == 404){
+
+           
+		}
+     
+        xml=new xml
+    xml.open(post,ajax.php,true)
+ xml.requist
+xml.send(naar een var ) 
+
+}

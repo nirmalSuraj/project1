@@ -1,0 +1,32 @@
+session start
+
+include functie en class
+
+tpl
+
+als session is niet gelijk aan 0 en niet gelijk aan zijn waarde dan teurnaar home.php
+
+if(sunmit){
+
+$_url=post img;
+    if(isset img_import){
+      $_url=functie uploadFoto
+    }
+   
+   resul=getdata from t_product
+
+   
+   while(row){
+          
+            insert data to t_product
+         srv?gelukt
+     }
+
+}
+
+<form srv post>
+ drop down toevoegen in waarde post soort
+     
+   input naam, btw,prijs,aantal,img,img_import
+</form>
+

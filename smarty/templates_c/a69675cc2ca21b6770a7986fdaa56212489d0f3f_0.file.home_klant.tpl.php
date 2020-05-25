@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2020-05-20 12:08:06
+/* Smarty version 3.1.31, created on 2020-05-25 13:32:13
   from "C:\xampp\htdocs\project\smarty\templates\home_klant.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5ec5018637d935_09141879',
+  'unifunc' => 'content_5ecbacbd5efe27_34866363',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a69675cc2ca21b6770a7986fdaa56212489d0f3f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\project\\smarty\\templates\\home_klant.tpl',
-      1 => 1589969285,
+      1 => 1590406325,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ec5018637d935_09141879 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ecbacbd5efe27_34866363 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,7 +44,8 @@ function content_5ec5018637d935_09141879 (Smarty_Internal_Template $_smarty_tpl)
             <div class="container-fluid" id="nav" >
                 <div id="extra"> 
                 <div id="logo">
-                           <a href="home_klant.php">WP
+                           <a href="<?php echo $_smarty_tpl->tpl_vars['logo']->value;?>
+">WP
                             </a>
                         </div>
                 <div class="row" id="nav1">

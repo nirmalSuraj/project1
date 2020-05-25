@@ -30,6 +30,7 @@ try{
 
 
     require "../code/output.inc.php";
+
 }catch(Exception $e){
 
     require("../php_lib/myExceptionHandling.inc.php");

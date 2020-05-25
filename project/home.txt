@@ -1,0 +1,36 @@
+start session
+include alle functie en class
+
+tpl
+
+if( sesson rol != 1 ){
+    terug naar login
+}
+
+links tonen die via database komen
+
+var resul=control of prducten bestaan t_producten
+if(!resul){
+  
+   producten niet beschikbaar
+}else{
+     <table>
+     th artielnummer
+     th producnaam
+     th kostprijs
+     th btw
+     th foto
+
+    while(row){
+      tr
+       td row index
+       td row procductnaam
+       td row kost prijs
+       td btw
+       td foto
+      tr
+     }
+  </table> toevoegen ajax 
+}
+
+

@@ -19,8 +19,9 @@ try{
 
                             where d_user='{$_user}'";
 
-                    $_PDO->query("$_query"); 
-        Redirect::to("../index.php");
+                    $_PDO->query("$_query");
+       
+       Redirect::to("../scripts/bezoeker.php?msg=Tot vogende keer ");
     }
    
 

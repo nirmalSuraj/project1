@@ -16,7 +16,7 @@ $_smarty->assign('producten', $_producten);
 $_smarty->assign('producten', $_producten);
 
 $_smarty->assign('modal', $_modal);
-//$_smarty->assign('commentaar',inlezen($_commentaar));
+$_smarty->assign('logo',($_rol == 1?"home_klant.php":"home_admin.php"));
 $_smarty->assign('menu',menu($_menu));
 $_smarty->assign('msg',$_msg);
 $_smarty->assign('error',$_error);

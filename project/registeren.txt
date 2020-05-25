@@ -1,0 +1,35 @@
+//registeren 
+
+start session
+include alle functie en class
+var voor tpl
+
+if submit not set{
+<form> 
+ met input :aanspreektitel,gender,naam,voor,naam,email,straat,poscode,paswoord,
+</form>
+}
+else{
+   post waarde controleren met validatie class
+
+    if alle geven zijn correct ingeven{
+       
+         controleer of dat deze email al bestaat
+         if(bestaat){
+                 teurg naar registratie  form geven erorrs mee via get
+               }else{
+                  var paswoor=encrypt(logon,paswoord)
+                  insert alle gevens in t_users
+                  insert alle gegevens in t_author..
+               }
+
+    }else{
+            teurg naar registratie  form geven erorrs mee via get
+
+           }
+
+}
+   
+
+smarty
+

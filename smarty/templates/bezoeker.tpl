@@ -12,14 +12,6 @@
     </head>
     <body>
 
-  
-
-
-         
-
-
-
-
 
                     <header>
 
@@ -63,6 +55,21 @@
             </div>
 
         </header>
+        
+        <div class="container" id="container"> 
+           <div class="p-3 mb-2 bg-success hidemsg text-white" id='msg' >{$msg}</div>
+                    <div class="p-3 mb-2 bg-danger hidemsg text-white" id='error' >{$error}</div>
+
+            <div class="row" id="row">
+                <div class='col-md-12 col-sm-12 ' id="inhoud">
+                    
+
+                    {$inhoud}
+
+
+                </div> 
+            </div> 
+        </div>
       
 
  <div class="container-fluid col-md-12" id="footer"  >

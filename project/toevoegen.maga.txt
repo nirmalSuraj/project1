@@ -1,0 +1,42 @@
+session start 
+
+include alles functie of class
+var srv=php_self
+als is het niet gelijk is aan  aan session index en getwaarde dan terug naar viste of home.php
+
+if(submit){
+
+   resul = gedata from t_soortproduct
+   while(row){
+      if(row productnaam != post waarde){
+       
+            insert data to t_soortproduct
+
+             naar toevoegenbmaga.php
+             srv?gelukt
+        }else{
+              naar srv
+        }
+
+     
+
+   }
+}
+
+
+<form post  naar toevoegenbmaga.php>
+    
+    drop down kies soort
+
+  submit
+</ form>
+<form post  naar srv>
+   
+
+  submit
+</ form>
+
+
+
+
+

@@ -1,0 +1,68 @@
+start Session
+include alle functie en class
+
+srv=phpself
+if(persisnten){
+    naar home pagina
+ }
+
+if submit nit set{
+
+   <form post>
+
+      input logon,paswoord,vergeten,persisnten,submit
+    </form>
+}else{
+    
+        var bestaat=stuur logon naar db om te controleren of die betaat  
+
+        if(bestaat){
+            var paswoord= encrypt(logon,post paswoord);
+           whiler(row=bestaat){
+                      
+                      if(paswoor != row paswoord){
+                             row foutteler++; 
+                              if(row foutteler > 3){
+                                   row timeout=time()+(60*60*3);
+                                   terug naar srv?geblokeerd
+                                      
+                                 }else{
+                                      
+                                         time=0;
+                                        
+                                      }
+                               
+                              
+                             terug naar srv?paswoor niet goed;
+
+                            }
+                         if(timeout > time()){
+                            
+                             terug naar srv?paswoor niet goed;
+                         }
+                       
+                }
+           
+            if(pressint){
+                 var salt=time();
+                  var indenifier=encrypt(logon,salt)
+                  var token=encrypt(unqid(rand(),true))
+                   var expire=time+60*60*8;7        
+                  setcookie("auth"indenifier,token,expire);
+              }else{
+                    indenifier=0
+                     token=0
+                     expire=0
+               }
+            
+             maak session van id en rol
+             update alles gegvens die auth staan
+             
+             ga naar home pagina
+
+            
+        }else{
+              keer terug naar srv?logon bestaat niet;
+         }
+ 
+}

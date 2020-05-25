@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2020-05-20 11:57:12
+/* Smarty version 3.1.31, created on 2020-05-25 12:47:48
   from "C:\xampp\htdocs\project\smarty\templates\bezoeker.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5ec4fef8213f85_69116473',
+  'unifunc' => 'content_5ecba2546495c0_11371097',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b43532d4fb4a2783ee32032106468efb1b30db17' => 
     array (
       0 => 'C:\\xampp\\htdocs\\project\\smarty\\templates\\bezoeker.tpl',
-      1 => 1589968613,
+      1 => 1590403666,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ec4fef8213f85_69116473 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ecba2546495c0_11371097 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,14 +35,6 @@ function content_5ec4fef8213f85_69116473 (Smarty_Internal_Template $_smarty_tpl)
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     </head>
     <body>
-
-  
-
-
-         
-
-
-
 
 
                     <header>
@@ -102,6 +94,24 @@ $_smarty_tpl->tpl_vars['__smarty_section_teller'] = $__section_teller_0_saved;
             </div>
 
         </header>
+        
+        <div class="container" id="container"> 
+           <div class="p-3 mb-2 bg-success hidemsg text-white" id='msg' ><?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
+</div>
+                    <div class="p-3 mb-2 bg-danger hidemsg text-white" id='error' ><?php echo $_smarty_tpl->tpl_vars['error']->value;?>
+</div>
+
+            <div class="row" id="row">
+                <div class='col-md-12 col-sm-12 ' id="inhoud">
+                    
+
+                    <?php echo $_smarty_tpl->tpl_vars['inhoud']->value;?>
+
+
+
+                </div> 
+            </div> 
+        </div>
       
 
  <div class="container-fluid col-md-12" id="footer"  >

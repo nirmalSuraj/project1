@@ -7,10 +7,11 @@ try{
     //pagina die wij gaan tonen aan klant
     $_tpl="bezoeker.tpl";
 //Session::show();
-  
-    
 
-        
+         
+    
+    $_inhoud.=Inlezen("welkome_text_homepagina.html");
+ $_inhoud.=Inlezen("img_klant_home.html");
 
 
 

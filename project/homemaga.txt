@@ -1,0 +1,13 @@
+start sessio,
+
+include alle functie of class
+
+tpl
+
+als niet gelijk is aan session index of getwaarde dan terug naar viste.php
+
+links: soort toevoegen,producten toevoegen, producten verwijderen, overzicht van producten
+
+
+
+ 

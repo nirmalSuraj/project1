@@ -20,7 +20,7 @@
             <div class="container-fluid" id="nav" >
                 <div id="extra"> 
                 <div id="logo">
-                           <a href="home_klant.php">WP
+                           <a href="{$logo}">WP
                             </a>
                         </div>
                 <div class="row" id="nav1">
