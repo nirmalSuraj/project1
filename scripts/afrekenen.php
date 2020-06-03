@@ -44,7 +44,7 @@ try{
         //make factuur nummer
         include "../class/randomChar.class.php";
         //uniek factuur id maken 
-        $_factuurnummer= "fk".$_POST["factuurnmmer"].randomChar::char().$_user;
+         $_factuurnummer= "fk".$_POST["factuurnmmer"].randomChar::char().$_user;
         //geselecteerde producten toeven in factuur
 
         $_query="select * from v_bijwerken where d_id = $_user";
@@ -56,21 +56,25 @@ try{
 
                 insert("t_factuur","t_users_d_index,d_productNaam,d_datum,d_btw,d_artieknummer,d_aantal,d_psofkg,d_prijs,d_factuurnummer",
                        [$_user,$_row['d_productNaam'],date("Y-m-d"),$_row['d_btw'],$_row['d_index'],$_row['d_aantal'],
-                        $_row['d_psofkg'],$_row['d_prijs'],$_factuurnummer
-
-                       ]);
+                        $_row['d_psofkg'],$_row['d_prijs'],$_factuurnummer]);
 
                 //na aanmaken van factuur gaan  wij stock in t_producten aanpassen
                 $_query_pro="select * from t_producten where d_index = {$_row['d_index']}";
+                
                 $_resul_pro=$_PDO->query("$_query_pro");
+                
                 $_id=$_row['d_index'];
+                
                 if($_resul_pro->rowCount() > 0){
 
                     while($_row_pro=$_resul_pro->fetch(PDO::FETCH_ASSOC)){
 
                         $_stock= $_row_pro['d_stock']-$_row['d_aantal'];
+                        
                         if($_row_pro['d_stock'] !=0){
+                            
                             $_sql[]=$_stock;
+                            
                             $_index[]=$_row['d_index'];
                             
                         }else{
@@ -78,6 +82,7 @@ try{
                               een andere keuze kan maken.
                             */
                             delete("t_list",["d_index","=",$_user,"and","t_producten_d_index","=",$_id]);
+                            
                             Redirect::to("shoppen.php?error=Helaas deze( {$_row_pro['d_productNaam']} ) product hebben wij niet stock");
                         }
 

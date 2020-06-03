@@ -8,6 +8,14 @@ try{
     //pagina die wij gaan tonen aan klant
     $_tpl="home.tpl";
 
+    if( isset($_SESSION['rol'])){
+
+        if($_SESSION['rol'] == 2){
+            Redirect::to("home_admin.php");
+       }
+            Redirect::to("home_klant.php");
+        
+    }
     //als er geregisteerd word dan krijgt de user gelijk rol van een klant
     $_rol=1;
 
@@ -15,10 +23,15 @@ try{
     //valideren bij submit(registeren);
     if(isset($_POST['registeren'])){
 
+
+        require("../php_lib/delete_whitepace.inc.php");
+               
+        delete_whitepace();
+
         require "../code/inputUitpakken.inc.php";
 
 
-
+    
         //regels voor elke var die binnen komt bepalen
         require "../code/validatie.inc.php";
 
@@ -81,21 +94,21 @@ try{
                 $_query="insert into t_authentication (d_user,d_logon,d_paswoord,d_identifier,d_token,d_expire,d_faultcntr,	d_timeOut,d_resetKey,d_resetTime,d_rol) value(?,?,?,?,?,?,?,?,?,?,?)";
                 $_query=$_PDO->prepare("$_query"); 
                 $_query->execute(["$_lastId",
-                                  "$_mail",
-                                  "$_paswoord",
-                                  "",
-                                  "",
-                                  "",
-                                  "",
-                                  "",
-                                  "",
-                                  "",
-                                  "$_rol"]); 
+                "$_mail",
+                "$_paswoord",
+                "",
+                "",
+                0,
+                0,
+                0,
+                "",
+                0,
+                "$_rol"]); 
 
 
 
                 //als geregistreerd is dan naar login pagina
-                Redirect::to('bedrijf_regis.php');
+                Redirect::to('login.php?msg=succesvol geregistreerd');
 
 
             }else{

@@ -17,6 +17,7 @@ try{
     -list (car)
     -shoppen 
     */
+    
     if (!isset($_SESSION["actie"]) || !in_array($_SESSION["actie"],$_toegang)|| !isset($_POST['toegang']) || $_POST['toegang'] != "ja"){
 
         throw new Exception("illegal access");

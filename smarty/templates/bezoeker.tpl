@@ -27,7 +27,7 @@
                         </div>
                 <div class="row" id="nav1">
                    
-                    <ul >
+                    <ul>
                        
                         {section name=teller loop=$menu}
                         <li><a href="{$menu[teller].d_link}">{$menu[teller].d_item}

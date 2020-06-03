@@ -5,7 +5,7 @@ try{
     require "../code/session_uitpakken.php";
 
     $_tpl='home_klant.tpl';
-
+   
     // om verder te gaan moet de gebruiker gegvens van zijn bedrijf invullen..
 
     //controleren of dat zijn gegevens zijn ingevud

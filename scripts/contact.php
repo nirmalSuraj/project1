@@ -41,7 +41,7 @@ require("../php_lib/sendMail.inc.php");
         }
     }else{
          $_inhoud=" 
-    <div class='col-md-7 col-sm-12 regisform form' >
+    <div class='col-md-6 col-sm-12 regisform form' id='contact'>
     <form  method='post'  id='form' action='$_srv'>
    <h1>Contact</h1>
    <label >Naam</label>
@@ -59,7 +59,11 @@ require("../php_lib/sendMail.inc.php");
 
   </textarea>
   <input type='submit' name='send' id='submit'>
-  <form  method='post' id='form' action='$_srv'>
+  <form >
+  </div>
+  
+   <div class='col-md-6 col-sm-12 regisform form' id='info'>
+   ".Inlezen("info.html")."
   </div>
   ";
 

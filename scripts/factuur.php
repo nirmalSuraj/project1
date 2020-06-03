@@ -34,7 +34,7 @@ try{
 
     $_user=($_SESSION['index']!=null?$_SESSION['index']:$_user);
 
-
+    
     ///alle facturnummers en datum toonen  als toon_fac niet set is 
 
     if(!isset($_GET['toon_fac'])){

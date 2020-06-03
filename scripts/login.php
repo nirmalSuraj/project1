@@ -8,10 +8,13 @@ try{
     $_tpl="home.tpl";
     //persistentLogon is true dan naar klantpagina
 
-    if( persistentLogon()){
-        Redirect::to("home_klant.php");
-        echo persistentLogon();
-        die();
+    if( persistentLogon() || isset($_SESSION['rol'])){
+
+        if($_SESSION['rol'] == 2){
+            Redirect::to("home_admin.php");
+       }
+            Redirect::to("home_klant.php");
+        
     }
 
     // inlog submit is geklikt dan valideren

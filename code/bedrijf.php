@@ -8,11 +8,11 @@ $_inhoud.="
 
                         <label for='bedrijf'>Bedrijf</label>
                         <input type='text' id='bedrijf' name='bedrijf'  value='{$_POST['bedrijf']}'>
-                        <label for='btw'>BTW</label>
+                        <label for='btw'>Ondernemingsnr</label>
                         <input type='text' id='btw' name='btw' value='{$_POST['btw']}'>
                          <label for='straat'>Straat</label>
                         <input type='text' id='straat' name='straat' value='{$_POST['straat']}'>
-                        <labelfor='huisnummer'>Gebouwnummer</label>
+                        <label for='huisnummer'>Nr</label>
                         <input type='text' id='nr' name='nr' value='{$_POST['nr']}' size='10'>
                         <label >Postcode</label>";
 $_inhoud.= dropDown("postcode","t_gemeente","d_postcode","d_postcode",$_start=0);

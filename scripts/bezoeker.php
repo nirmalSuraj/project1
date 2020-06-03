@@ -8,7 +8,14 @@ try{
     $_tpl="bezoeker.tpl";
 //Session::show();
 
-         
+if(isset($_SESSION['rol'])){
+
+    if($_SESSION['rol'] == 2){
+        Redirect::to("home_admin.php");
+   }
+        Redirect::to("home_klant.php");
+    
+}
     
     $_inhoud.=Inlezen("welkome_text_homepagina.html");
  $_inhoud.=Inlezen("img_klant_home.html");

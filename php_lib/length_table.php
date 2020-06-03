@@ -1,6 +1,6 @@
 <?php
 
-function lenth_table($_table,$_naam,$_where){
+function lenth_table($_table,$_naam){
     global $_PDO;
  
     $_query="select count({$_naam}) as d_index from {$_table} ";

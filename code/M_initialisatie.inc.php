@@ -26,7 +26,7 @@ require("../connections/pdo.inc.php");
 //deze klaas zorgt voor  Redirect
 require("../class/Redirect.class.php");
 //functie om "radio-buttons" samen te stellen
-include("../php_lib/Button.php");
+include("../php_lib/button.php");
 //bij een error toon error
 $_error=(!isset($_GET['error'])?"":$_GET['error']);
 //communicatie var

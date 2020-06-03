@@ -572,3 +572,34 @@ footer{
 .clearfix {
     clear: both;
 }
+
+#contact{
+      margin: 0 0;
+    border-right: 0 ;
+    border-radius: 0px;
+}
+#info{
+      margin: 0 0;
+    border-left: 0 ;
+    border-radius: 0px;
+}
+
+#info div h2{
+     text-align: center;
+}
+
+#info div label{
+     float: left;
+      margin-right: 0em;
+  
+}
+
+#info div iframe{
+     margin-top: 80px;
+  
+}
+
+
+
+
+

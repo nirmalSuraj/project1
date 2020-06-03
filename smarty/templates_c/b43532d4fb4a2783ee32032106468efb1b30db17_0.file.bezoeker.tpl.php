@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2020-05-25 12:47:48
+/* Smarty version 3.1.31, created on 2020-05-31 17:59:26
   from "C:\xampp\htdocs\project\smarty\templates\bezoeker.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5ecba2546495c0_11371097',
+  'unifunc' => 'content_5ed3d45eb5b174_85159110',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b43532d4fb4a2783ee32032106468efb1b30db17' => 
     array (
       0 => 'C:\\xampp\\htdocs\\project\\smarty\\templates\\bezoeker.tpl',
-      1 => 1590403666,
+      1 => 1590764017,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ecba2546495c0_11371097 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ed3d45eb5b174_85159110 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,7 +51,7 @@ function content_5ecba2546495c0_11371097 (Smarty_Internal_Template $_smarty_tpl)
                         </div>
                 <div class="row" id="nav1">
                    
-                    <ul >
+                    <ul>
                        
                         <?php
 $__section_teller_0_saved = isset($_smarty_tpl->tpl_vars['__smarty_section_teller']) ? $_smarty_tpl->tpl_vars['__smarty_section_teller'] : false;

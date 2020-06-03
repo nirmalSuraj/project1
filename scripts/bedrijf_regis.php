@@ -9,9 +9,14 @@ try{
     if($_POST['bedrijf_regis']){
 
         // white ruimte word verwijdert
-        //delete_whitepace();
+        
+              
+        require("../php_lib/delete_whitepace.inc.php");
+               
+        delete_whitepace();
+        
 
-       require'../code/bedrijf_validatie.php';
+       require('../code/bedrijf_validatie.php');
 
         //als elke input is juist ingevuld dan insert els 
         if($_valideren->check()){

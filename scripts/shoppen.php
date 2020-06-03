@@ -4,7 +4,7 @@ try{
     require "../code/session_uitpakken.php";
 
     $_tpl='shoppen_klant.tpl';
-
+ 
     $_toegang=[1,5,4];
     //om te kunnen shoppen  moet de gebruiker via de juiste weg komen!!
      /*om hier te binnen moegen moet langs éé van volgende wegen binnen komen 

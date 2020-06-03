@@ -1,7 +1,7 @@
 <?php
 
 try{
- require"/class/Redirect.class.php";
+ require"class/Redirect.class.php";
      
     Redirect::to("scripts/bezoeker.php");
     
