@@ -42,21 +42,35 @@ try{
 
     }else{
         //make factuur nummer
-        include "../class/randomChar.class.php";
+        include "../php_lib/get_val.php";
+        $_factuurnummer = "fk";
+         
+        $_count= get_val_data("d_count_holder","t_factuur","t_users_d_index",$_user);
+       
+        if( $_count == null){
+            $_factuurnummer .= date("d-m-Y");
+            $_factuurnummer .="-0";
+            $_count=0;
+           
+        }else{
+            $_count++;
+            $_factuurnummer .= date("d-m-Y")."-".$_count;
+        }
+       
         //uniek factuur id maken 
-         $_factuurnummer= "fk".$_POST["factuurnmmer"].randomChar::char().$_user;
+        
         //geselecteerde producten toeven in factuur
 
         $_query="select * from v_bijwerken where d_id = $_user";
         $_resul=$_PDO->query("$_query");
-
+  
         if($_resul->rowCount() > 0 ){
 
             while($_row=$_resul->fetch(PDO::FETCH_ASSOC)){
 
-                insert("t_factuur","t_users_d_index,d_productNaam,d_datum,d_btw,d_artieknummer,d_aantal,d_psofkg,d_prijs,d_factuurnummer",
+                insert("t_factuur","t_users_d_index,d_productNaam,d_datum,d_btw,d_artieknummer,d_aantal,d_psofkg,d_prijs,d_factuurnummer,d_count_holder",
                        [$_user,$_row['d_productNaam'],date("Y-m-d"),$_row['d_btw'],$_row['d_index'],$_row['d_aantal'],
-                        $_row['d_psofkg'],$_row['d_prijs'],$_factuurnummer]);
+                        $_row['d_psofkg'],$_row['d_prijs'],$_factuurnummer,$_count]);
 
                 //na aanmaken van factuur gaan  wij stock in t_producten aanpassen
                 $_query_pro="select * from t_producten where d_index = {$_row['d_index']}";

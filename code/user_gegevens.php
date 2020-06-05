@@ -20,11 +20,11 @@ $_aanspreek=get_val_data("d_aanspreekTitel","v_full_gegevens_users","d_index",$_
        ";
 		$_inhoud.= dropDown("aanpreek","t_aanspreektitel","d_index","d_aanspreekTitel",$_start=0);
     $_inhoud.="<label>Naam</label>
-    <input type='text' name='naam' value='{$_row['d_naam']}' >
+    <input type='text' name='naam' value='{$_row['d_naam']}' required >
     <label >Voornaam</label>
-    <input type='text' name='voornaam' value='{$_row['d_voornaam']}' >
+    <input type='text' name='voornaam' value='{$_row['d_voornaam']}' required >
      <label >Geboortedatum</label>
-    <input type='date' id='geboortedtm' name='geboortedatum' value='{$_row['d_geboortedatum']}'>
+    <input type='date' id='geboortedtm' name='geboortedatum' value='{$_row['d_geboortedatum']}' required >
 		<label >Gender </label>
      <input type='text' name='old_gen' value='$_gender' readonly >
      <label >Aanpas gender </label>
@@ -34,9 +34,9 @@ $_aanspreek=get_val_data("d_aanspreekTitel","v_full_gegevens_users","d_index",$_
 		$_inhoud.=" 
 
     <label >Straat</label>
-    <input type='text' name='straat' value='{$_row['d_straat']}' size='20'>
+    <input type='text' name='straat' value='{$_row['d_straat']}' size='20' required >
     <label >Nr</label>
-    <input type='text' name='nr' value='{$_row['d_huisNummer']}' size='10'>
+    <input type='text' name='nr' value='{$_row['d_huisNummer']}' size='10' required >
     <label >Postcode</label>
    ";
    $_inhoud.= "<input type='text' name='postcode' value='".get_val_data("d_postcode","v_full_gegevens_users","d_index",$_SESSION['index'])."' size='10'>";
@@ -45,9 +45,9 @@ $_aanspreek=get_val_data("d_aanspreekTitel","v_full_gegevens_users","d_index",$_
     "."<input type='text' name='gemeente' value='".get_val_data("d_gemeentenaam","v_full_gegevens_users","d_index",$_SESSION['index'])."' size='10'>"
     ."
      <label >telefoon</label>
-   	<input type='text' name='tel' size='10' value='{$_row['d_telefoonnummer']}'  placeholder='03/....'>
+   	<input type='text' name='tel' size='10' value='{$_row['d_telefoonnummer']}'  placeholder='03/....' required >
  	  <label>E-mail</label>
-    <input type='text' name='mail' value='{$_row['d_email']}' size='40'> 
+    <input type='text' name='mail' value='{$_row['d_email']}' size='40' required > 
     </fieldset>
 		<input name='aanpassen' id='submit' type='submit' value='Aanpassen'>
         

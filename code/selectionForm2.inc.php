@@ -9,9 +9,9 @@
     <fieldset>
     <legend>Personalia</legend>
     <label>Naam</label>
-    <input type='text' name='naam'>
+    <input type='text' name='naam'  >
     <label >Voornaam</label>
-    <input type='text' name='voornaam'>
+    <input type='text' name='voornaam'  >
 		<label >Gender</label>";
 		$_inhoud.= dropDown("gender","t_gender","d_index","d_sex",$_start=0);
 		$_inhoud.="<label >Soort lid</label>";
@@ -21,18 +21,18 @@
   <fieldset>
   <legend>Contact informatie</legend>
     <label >Straat</label>
-    <input type='text' name='straat' size='20'>
+    <input type='text' name='straat' size='20'  >
     <label >Nr </label>
-    <input type='text' name='nr' size='10'>
+    <input type='text' name='nr' size='10'  >
  <label >Postcode</label>
- <input type='text' name='postcode' size='10'>
+ <input type='text' name='postcode' size='10'  >
   
     <label >Gemeente</label>
-    <input type='text' name='gemeente' size='10'>
+    <input type='text' name='gemeente' size='10'  >
     <label>Telefoon</label>
-   	<input type='text' name='tel' size='10'>
+   	<input type='text' name='tel' size='10'  >
  	  <label>E-mail</label>
-    <input type='text' name='mail' size='40'> 
+    <input type='text' name='mail' size='40'  > 
     </fieldset>
 		<input name='bekijken' id='submit' type='submit' value='verzenden'>
    

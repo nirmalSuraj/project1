@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 14 mei 2020 om 18:42
+-- Gegenereerd op: 05 jun 2020 om 19:42
 -- Serverversie: 10.1.21-MariaDB
 -- PHP-versie: 5.6.30
 
@@ -68,7 +68,8 @@ CREATE TABLE `t_authentication` (
 INSERT INTO `t_authentication` (`d_user`, `d_logon`, `d_paswoord`, `d_identifier`, `d_token`, `d_expire`, `d_faultcntr`, `d_timeOut`, `d_resetKey`, `d_resetTime`, `d_rol`) VALUES
 (1, 'nirmalsuraj2@gmail.com', 'd56faf3eccba0a31d84b993d59f897566efde8e86c3673bcf4680fffcb21daf7', '', '', 0, 0, 0, '', 0, 1),
 (2, 'sunil@gmail.com', '17e882f0048a008e72fdeb6724d06f0d3c3873c45cf2e71d2a20c1ed1230d65e', '', '', 0, 0, 0, '', 0, 2),
-(3, 'flores@gmail.com', 'd15a4a52648402bb724813a214e04ee9c941f78e795fed51b5ef01b48a31345c', '', '', 0, 0, 0, '', 0, 1);
+(3, 'flores@gmail.com', 'd15a4a52648402bb724813a214e04ee9c941f78e795fed51b5ef01b48a31345c', '', '', 0, 0, 0, '', 0, 1),
+(12, 'sunny@gmail.com', 'f2296b894edd72a2c5c2c5db4d86cfe708639851da5eca832a86c0343847a89f', '', '', 0, 0, 0, '', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -175,47 +176,23 @@ CREATE TABLE `t_factuur` (
   `t_users_d_index` int(11) NOT NULL,
   `d_productNaam` varchar(100) DEFAULT NULL,
   `d_prijs` varchar(100) DEFAULT NULL,
-  `d_datum` date DEFAULT NULL,
+  `d_datum` char(10) DEFAULT NULL,
   `d_btw` varchar(45) DEFAULT NULL,
   `d_psofkg` char(2) DEFAULT NULL,
   `d_artieknummer` int(11) DEFAULT NULL,
   `d_aantal` int(11) DEFAULT NULL,
-  `d_factuurnummer` varchar(100) NOT NULL
+  `d_factuurnummer` varchar(100) NOT NULL,
+  `d_count_holder` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `t_factuur`
 --
 
-INSERT INTO `t_factuur` (`d_index`, `t_users_d_index`, `d_productNaam`, `d_prijs`, `d_datum`, `d_btw`, `d_psofkg`, `d_artieknummer`, `d_aantal`, `d_factuurnummer`) VALUES
-(55, 1, 'Mango', '2.5', '2020-04-28', '6%', 'ps', 1, 4, 'fk2038p31'),
-(56, 1, 'Tomaten', '3', '2020-04-28', '6%', 'kg', 2, 4, 'fk2038p31'),
-(57, 1, 'Tomaten', '3', '2020-04-28', '6%', 'kg', 2, 6, 'fk2032a61'),
-(58, 1, 'Tomaten', '3', '2020-04-29', '6%', 'kg', 2, 5, 'fk859j161'),
-(59, 1, 'Prei', '2.5', '2020-04-29', '6%', 'ps', 3, 2, 'fk859j161'),
-(60, 1, 'Tomaten', '3', '2020-04-29', '6%', 'kg', 2, 3, 'fk1354g11'),
-(61, 1, 'Tomaten', '3', '2020-04-29', '6%', 'kg', 2, 1, 'fk1653i51'),
-(62, 1, 'Tomaten', '3', '2020-04-29', '6%', 'kg', 2, 2, 'fk1610g41'),
-(63, 1, 'Prei', '2.5', '2020-04-29', '6%', 'ps', 3, 2, 'fk1610g41'),
-(64, 1, 'Tomaten', '3', '2020-04-29', '6%', 'kg', 2, 2, 'fk1611l121'),
-(65, 1, 'Tomaten', '3', '2020-04-29', '6%', 'kg', 2, 2, 'fk1611j81'),
-(66, 1, 'Tomaten', '3', '2020-04-29', '6%', 'kg', 2, 2, 'fk1632g101'),
-(67, 1, 'Tomaten', '3', '2020-04-29', '6%', 'kg', 2, 2, 'fk1651l21'),
-(68, 1, 'Tomaten', '3', '2020-04-29', '6%', 'kg', 2, 2, 'fk1625b141'),
-(69, 1, 'Tomaten', '3', '2020-04-29', '6%', 'kg', 2, 2, 'fk1658g21'),
-(70, 1, 'Tomaten', '3', '2020-04-29', '6%', 'kg', 2, 2, 'fk1614o01'),
-(71, 1, 'Tomaten', '3', '2020-04-29', '6%', 'kg', 2, 2, 'fk1626c101'),
-(72, 1, 'Mango', '2.5', '2020-04-29', '6%', 'ps', 1, 2, 'fk1652o81'),
-(73, 1, 'Prei', '2.5', '2020-04-29', '6%', 'ps', 3, 2, 'fk1652o81'),
-(74, 1, 'Mango', '2.5', '2020-04-29', '6%', 'ps', 1, 1, 'fk1639m111'),
-(75, 1, 'Tomaten', '3', '2020-04-29', '6%', 'kg', 2, 1, 'fk1639m111'),
-(76, 1, 'Prei', '2.5', '2020-04-29', '6%', 'ps', 3, 1, 'fk1639m111'),
-(77, 1, 'Tomaten', '3', '2020-05-01', '6%', 'kg', 2, 2, 'fk1343n41'),
-(78, 1, 'Prei', '2.5', '2020-05-01', '6%', 'ps', 3, 1, 'fk1343n41'),
-(79, 1, 'Appel', '2.5', '2020-05-14', '6%', 'kg', 9, 4, 'fk1139o91'),
-(80, 1, 'Melk', '2', '2020-05-14', '6%', 'ps', 15, 4, 'fk1139o91'),
-(81, 1, 'Suraj', '5', '2020-05-14', '12%', 'kg', 8, 4, 'fk1139o91'),
-(82, 1, 'stink kaas', '30', '2020-05-14', '12%', 'ps', 14, 5, 'fk1139o91');
+INSERT INTO `t_factuur` (`d_index`, `t_users_d_index`, `d_productNaam`, `d_prijs`, `d_datum`, `d_btw`, `d_psofkg`, `d_artieknummer`, `d_aantal`, `d_factuurnummer`, `d_count_holder`) VALUES
+(104, 1, 'Tomaten', '2', '2020-06-05', '6%', 'kg', 2, 5, 'fk05-06-2020-0', 0),
+(105, 1, 'Melk', '2', '2020-06-05', '6%', 'ps', 15, 3, 'fk05-06-2020-1', 1),
+(106, 1, 'Visstick', '5', '2020-06-05', '12%', 'ps', 10, 6, 'fk05-06-2020-2', 2);
 
 -- --------------------------------------------------------
 
@@ -1858,11 +1835,11 @@ CREATE TABLE `t_menu` (
 INSERT INTO `t_menu` (`d_index`, `d_item`, `d_link`, `d_volgorde`, `d_menu`, `d_0`, `d_1`, `d_2`, `d_3`, `d_4`) VALUES
 (1, 'Shoppen', 'klant_select.php?actie=1', 2, 3, 0, 1, 0, 0, 0),
 (2, 'Registeren', 'resgisteren.php', 1, 2, 1, 1, 1, 1, 1),
-(3, 'Login', 'login.php', 0, 1, 1, 1, 1, 1, 1),
+(3, 'Login', 'login.php', 1, 1, 1, 1, 1, 1, 1),
 (4, 'Registeren', 'resgisteren.php', 1, 0, 1, 1, 1, 1, 1),
 (5, 'Login', 'login.php', 1, 0, 1, 1, 1, 1, 1),
-(6, 'Home', 'bezoeker.php', 2, 2, 1, 0, 0, 0, 0),
-(7, 'Home', 'bezoeker.php', 2, 1, 1, 0, 0, 0, 0),
+(6, 'Home', 'bezoeker.php', 0, 2, 1, 0, 0, 0, 0),
+(7, 'Home', 'bezoeker.php', 0, 1, 1, 0, 0, 0, 0),
 (46, 'fa fa-shopping-cart', 'klant_select.php?actie=4', 5, 3, 0, 1, 0, 0, 0),
 (47, 'Afrekenen', 'klant_select.php?actie=5', 0, 3, 0, 1, 0, 0, 0),
 (48, 'Factuur', 'klant_select.php?actie=2', 3, 3, 0, 1, 0, 0, 0),
@@ -1881,15 +1858,16 @@ INSERT INTO `t_menu` (`d_index`, `d_item`, `d_link`, `d_volgorde`, `d_menu`, `d_
 (62, 'Verwijderen', 'select.php?actie=10', 5, 5, 0, 0, 1, 0, 0),
 (63, 'fa fa-home', 'home_admin.php', 0, 6, 0, 0, 1, 0, 0),
 (64, 'Back up', 'errors.php?dwn=go', 1, 6, 0, 0, 1, 0, 0),
-(65, 'sd', NULL, NULL, NULL, NULL, NULL, NULL, 0, 0),
-(66, 'qsd', NULL, NULL, NULL, NULL, NULL, NULL, 0, 0),
+(65, 'Login', '../scripts/login.php', 2, 7, 1, 0, 0, 0, 0),
+(66, 'Home', '../scripts/bezoeker.php', 0, 7, 1, 0, 0, 0, 0),
 (67, NULL, 'sdqqs', NULL, NULL, NULL, NULL, NULL, 0, 0),
 (68, NULL, 'qsddqs', NULL, NULL, NULL, NULL, NULL, 0, 0),
 (69, 'Verwijderen', 'errors.php?reset=go', 3, 6, 0, 0, 1, 0, 0),
 (70, 'Contact', 'contact.php', 10, 0, 1, 1, 0, 0, 0),
 (71, 'Contact', 'contact.php', 3, 2, 1, 1, 0, 0, 0),
 (72, 'Contact', 'contact.php', 5, 3, 1, 1, 0, 0, 0),
-(73, 'Contact', 'contact.php', 10, 1, 1, NULL, NULL, 0, 0);
+(73, 'Contact', 'contact.php', 10, 1, 1, 1, 0, 0, 0),
+(74, 'Registeren', '../scripts/resgisteren.php', 1, 7, 1, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1957,17 +1935,17 @@ CREATE TABLE `t_producten` (
 --
 
 INSERT INTO `t_producten` (`d_index`, `d_productNaam`, `d_img`, `d_prijs`, `d_psofkg`, `d_beschrijving`, `t_soort_d_index`, `t_btw_d_index`, `d_stock`) VALUES
-(1, 'Mango', '../img/FTa0j16.png', 3, 'ps', 'Afrika', 2, 2, 1),
-(2, 'Tomaten', '../img/tomaat.jpg', 2, 'kg', 'Bel', 3, 2, 50),
-(3, 'Prei', '../img/prei.jpg', 4, 'ps', 'bel', 3, 2, 10),
-(8, 'Suraj', '../img/FTi16n2.png', 5, 'kg', 'dit is een test2', 1, 3, 6),
-(9, 'Appel', '../img/FTl11e16.png', 2.5, 'kg', 'zoete appels ', 2, 2, 6),
-(10, 'Visstick', '../img/FTn12h14.png', 5, 'ps', 'iglo', 6, 3, 50),
+(2, 'Tomaten', '../img/tomaat.jpg', 2, 'kg', 'Bel', 3, 2, 36),
+(3, 'Prei', '../img/prei.jpg', 4, 'ps', 'bel', 3, 2, 19),
+(8, 'Suraj', '../img/FTi16n2.png', 5, 'kg', 'dit is een test2', 1, 3, 1),
+(9, 'Appel', '../img/FTl11e16.png', 2.5, 'kg', 'zoete appels ', 2, 2, 0),
+(10, 'Visstick', '../img/FTn12h14.png', 5, 'ps', 'iglo', 6, 3, 39),
 (11, 'Pot test', '../img/FTf3m8.png', 35, 'ps', 'Metaal , 2 l', 4, 4, 20),
 (12, 'Mes', '../img/FTd5g11.png', 3, 'ps', 'millennium', 5, 4, 30),
-(13, 'Pan', '../img/FTf2c12.png', 40, 'ps', 'millennium', 7, 4, 5),
 (14, 'stink kaas', '../img/FTd13d5.png', 30, 'ps', 'stink-kaas, bel', 8, 3, 25),
-(15, 'Melk', '../img/FTa2m2.png', 2, 'ps', 'Volle Melk', 8, 2, 16);
+(15, 'Melk', '../img/FTa2m2.png', 2, 'ps', 'Volle Melk', 8, 2, 12),
+(16, 'pan', '../img/FTg13l1.png', 55, 'ps', 'test', 7, 3, 46),
+(17, 'pan', '../img/FT9k15.png', 55, 'ps', 'te', 1, 2, 50);
 
 -- --------------------------------------------------------
 
@@ -2043,8 +2021,9 @@ CREATE TABLE `t_users` (
 --
 
 INSERT INTO `t_users` (`d_index`, `d_naam`, `d_email`, `d_geboortedatum`, `d_voornaam`, `d_straat`, `d_huisNummer`, `d_telefoonnummer`, `d_datum`, `t_gender_d_index`, `t_adres_d_index`, `t_aanspreekTitel_d_index`, `t_rol_d_index`) VALUES
-(1, 'suraj', 'nirmalsuraj2@gmail.com', '1993-09-12', 'nirmal', 'plantin en moretuslei', '137', '03/2592027', '2020-04-15', 2, 321, 2, 1),
-(2, 'nirmal', 'flores@gmail.com', '2019-08-27', 'sunil', 'plantin en moretuslei', '187', '03/5552020', '2020-04-18', 2, 321, 1, 2);
+(1, 'suraj', 'nirmalsuraj2@gmail.com', '1993-09-12', 'nirmal', 'plantin en moretuslei', '137', '03/2592027', '2020-04-15', 1, 321, 2, 1),
+(2, 'nirmal', 'flores@gmail.com', '2019-08-27', 'sunil', 'plantin en moretuslei', '187', '03/5552020', '2020-04-18', 2, 321, 1, 2),
+(12, 'abi', 'sunny@gmail.com', '1993-09-12', 'nir', 'plantin', '12', '03/1351660', '2020-06-02', 2, 60, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -2304,7 +2283,7 @@ ALTER TABLE `t_btw`
 -- AUTO_INCREMENT voor een tabel `t_factuur`
 --
 ALTER TABLE `t_factuur`
-  MODIFY `d_index` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
+  MODIFY `d_index` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
 --
 -- AUTO_INCREMENT voor een tabel `t_gemeente`
 --
@@ -2314,7 +2293,7 @@ ALTER TABLE `t_gemeente`
 -- AUTO_INCREMENT voor een tabel `t_menu`
 --
 ALTER TABLE `t_menu`
-  MODIFY `d_index` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
+  MODIFY `d_index` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 --
 -- AUTO_INCREMENT voor een tabel `t_mnemonic`
 --
@@ -2329,7 +2308,7 @@ ALTER TABLE `t_mnemonic_user`
 -- AUTO_INCREMENT voor een tabel `t_producten`
 --
 ALTER TABLE `t_producten`
-  MODIFY `d_index` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `d_index` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT voor een tabel `t_soort`
 --
@@ -2339,7 +2318,7 @@ ALTER TABLE `t_soort`
 -- AUTO_INCREMENT voor een tabel `t_users`
 --
 ALTER TABLE `t_users`
-  MODIFY `d_index` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `d_index` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- Beperkingen voor geëxporteerde tabellen
 --

@@ -7,7 +7,7 @@ $_inhoud= "
     <fieldset>
    
     ";
-       $_inhoud.="<label >soort </label>
+       $_inhoud.="<label >Soort </label>
         <input type='text' name='naam'  >
         
      

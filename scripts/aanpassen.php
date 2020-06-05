@@ -84,10 +84,13 @@ try{
 		<input name='aanpassen' id='submit' type='submit' value='Aanpassen'>
 
     </form>
-
+     
      <div>";
         }
 
+        $_inhoud.= "<button class='janee'><a href='klant_profiel.php'>Terug</a></button>
+        <div>
+        ";   
 
     }
 

@@ -20,7 +20,7 @@ try{
         <h1>Te bestellen  </h1>
         
         <table id='list_data'>
-          <th>Producten</th>
+          <th>Te bestellen producten </th>
     <th>Instock</th>
         ";
         while($_row=$_resul->fetch(PDO::FETCH_ASSOC)){

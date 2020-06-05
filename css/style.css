@@ -1,605 +1,559 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-
-body{
-    background-color: #fff ;
+body {
+  background-color: #fff;
 }
 
 /*algemeen table setup*/
 table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
 
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+  background-color: #dddddd;
 }
 
-#list_data{
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 30%;
-    margin: auto auto;
+#list_data {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 30%;
+  margin: auto auto;
 }
 
-.tr_td{
-    border: 1px solid #dddddd;
-    text-align: center;
-    padding: 8px;
+.tr_td {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
 }
-table .btn-list{
-    width: 100px;
+table .btn-list {
+  width: 100px;
 }
-.td-btn{
-    width: 100px;
+.td-btn {
+  width: 100px;
 }
 
 /*************************************************/
 
-#container{
-
-
-    background-color: #fff;
-    margin: auto auto;
-    overflow: hidden;
-
+#container {
+  background-color: #fff;
+  margin: auto auto;
+  overflow: hidden;
 }
 
 /*logo*/
-#logo{
-    width: 100px;
-    height: 50px;
-    margin:auto auto;
-    background-color: #fff;
-    line-height: 50px;
-    border-radius: 100%;
-    font-family: 'Dancing Script', cursive;
-
+#logo {
+  width: 100px;
+  height: 50px;
+  margin: auto auto;
+  background-color: #fff;
+  line-height: 50px;
+  border-radius: 100%;
+  font-family: "Dancing Script", cursive;
 }
-#logo a{
-    padding: 20px;
-    color: #333;
-    text-decoration: none;
-     font-family: 'Dancing Script', cursive;
-    font-size: 40px;
-
-
+#logo a {
+  padding: 20px;
+  color: #333;
+  text-decoration: none;
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
 }
 
 /************burgger button*********************/
 
 #buggerbutton {
-
-    display: none;
-    cursor: pointer;
-    margin-left: 50px;
-    margin-top: -50px;
+  display: none;
+  cursor: pointer;
+  margin-left: 50px;
+  margin-top: -50px;
 }
 
-.bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #fff;
-    margin: 6px 0;
-    transition: 0.4s;
-
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
 }
 
 /* Rotate first bar */
 .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-    transform: rotate(-45deg) translate(-9px, 6px) ;
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
 }
 
 /* Fade out the second bar */
 .change .bar2 {
-    opacity: 0;
+  opacity: 0;
 }
 
 /* Rotate last bar */
 .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-    transform: rotate(45deg) translate(-8px, -8px) ;
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
 }
 
 /*************************nav*******************/
 
-
-#nav{
-    width: 100%;
-    position: fixed;
-    background-color: #fff;
-    transition: left 1s;
-    z-index: 1;
-    top: 1px;
-    padding: 0px;
-
-
+#nav {
+  width: 100%;
+  position: fixed;
+  background-color: #fff;
+  transition: left 1s;
+  z-index: 1;
+  top: 1px;
+  padding: 0px;
 }
-#extra{
-    width: 100%;
-    background-color: #333;
-    transition: left 1s;
-    z-index: 1;
-    top: 1px;
-    padding: 1px;
-
-
-
+#extra {
+  width: 100%;
+  background-color: #333;
+  transition: left 1s;
+  z-index: 1;
+  top: 1px;
+  padding: 1px;
 }
 
-#nav1{
-    background-color: #333;
-    transition:all 1s;
-    margin-top: 0px;
-
-
-
+#nav1 {
+  background-color: #333;
+  transition: all 1s;
+  margin-top: 0px;
 }
 
-ul{
-    background-color: #333;
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto auto;
-
-
+ul {
+  background-color: #333;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto auto;
 }
 
-ul li{
-    line-height: 28px;
-    padding: 10px;
-    list-style-type: none;
-
-
+ul li {
+  line-height: 28px;
+  padding: 10px;
+  list-style-type: none;
 }
-ul li a{
-
-    text-decoration: none;
-    color: #fff;
-
+ul li a {
+  text-decoration: none;
+  color: #fff;
 }
 
-
-ul li a:hover{
-    background-color: #000;
-    text-decoration: none;
-
+ul li a:hover {
+  background-color: #000;
+  text-decoration: none;
 }
 
-ul li:hover{
-    background-color: #000;
-
+ul li:hover {
+  background-color: #000;
 }
 
-.hide{
-    top: 0;
-    left: -100px;
-    height: 100%;
-    background-color: #333;
-
+.hide {
+  top: 0;
+  left: -100px;
+  height: 100%;
+  background-color: #333;
 }
 
-.show{
-    top: 0;
-    left: 10px;
-    height: 100%;
-    background-color: #333;
-
+.show {
+  top: 0;
+  left: 10px;
+  height: 100%;
+  background-color: #333;
 }
 /** content**/
 
-
-
-#row{
-    background-color: #fff;
-    margin-top: 100px;
-
+#row {
+  background-color: #fff;
+  margin-top: 100px;
 }
 
-#row h1{
-    text-align: center;
-
+#row h1 {
+  text-align: center;
 }
 
-.wit{
-    background: #fff;
+.wit {
+  background: #fff;
 }
 
 /*********form***********/
-.form label{
-
-    clear: both;
-    float: left;
-    margin-right: 2em;
-    width: 130px;
+.form label {
+  clear: both;
+  float: left;
+  margin-right: 2em;
+  width: 130px;
 }
-.form{
-    width: 50%;
-    background-color: #fff;
-    border: 1px solid #000;
-    margin: auto auto;
-    border-radius: 10px;
-}
-
-.form input[type=text],input[type=number],input[type=email],input[type=date],input[type=password]{
-    width: 50%;
-    float: left;
-    margin-bottom: 0.5em;
-    margin-right: 1em;
-    padding: 5px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    background-color: #333;
-    color: #fff;
-
-}
-#gender, #postcode,#gemeente,#aanpreek,#date,#pass,#pass_rep,form #soort,#input,#btw,#stock,#geboortedtm{
-    width: 50%;
-    float: left;
-    margin-bottom: 0.5em;
-    margin-right: 1em;
-    padding: 5px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    background-color: #333;
-    color: #fff;
-    margin-top: 0;
+.form {
+  width: 50%;
+  background-color: #fff;
+  border: 1px solid #000;
+  margin: auto auto;
+  border-radius: 10px;
 }
 
-
-
-#label{
-    line-height: 15px;
-    margin-left: 170px;
+.form input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="date"],
+input[type="password"] {
+  width: 50%;
+  float: left;
+  margin-bottom: 0.5em;
+  margin-right: 1em;
+  padding: 5px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #333;
+  color: #fff;
 }
-#checkb{
-    float:left;
-    margin: auto auto;
-    color: #333;
-}
-#pvg{
-    display: block;
-    margin-top: 120px;
-    margin-left: 170px;
+#gender,
+#postcode,
+#gemeente,
+#aanpreek,
+#date,
+#pass,
+#pass_rep,
+form #soort,
+#input,
+#btw,
+#stock,
+#geboortedtm {
+  width: 50%;
+  float: left;
+  margin-bottom: 0.5em;
+  margin-right: 1em;
+  padding: 5px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #333;
+  color: #fff;
+  margin-top: 0;
 }
 
-.form input[type=submit] {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+#label {
+  line-height: 15px;
+  margin-left: 170px;
+}
+#checkb {
+  float: left;
+  margin: auto auto;
+  color: #333;
+}
+#pvg {
+  display: block;
+  margin-top: 120px;
+  margin-left: 170px;
 }
 
-.form input[type=submit],input[type=text]:hover {
-    background-color: #333
-
+.form input[type="submit"] {
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
+.form input[type="submit"],
+input[type="text"]:hover {
+  background-color: #333;
+}
 
 .card {
-    box-shadow: 0 16px 16px 0 #333;
-    padding: 16px;
-    text-align: center;
-    background-color: #333;
-    margin: 10px;
+  box-shadow: 0 16px 16px 0 #333;
+  padding: 16px;
+  text-align: center;
+  background-color: #333;
+  margin: 10px;
 }
-
 
 /*********************home pagina voor klant**********************/
 
-.border{
-    border: 1px solid #000;
-    border-radius: 10px;
+.border {
+  border: 1px solid #000;
+  border-radius: 10px;
 }
-.border h1{
-
-    text-align: center;
-    text-decoration: underline;
-
-
+.border h1 {
+  text-align: center;
+  text-decoration: underline;
 }
 
 /* form setup voor login en registeren */
-.form{
-    margin: auto auto;
+.form {
+  margin: auto auto;
 }
-.regisform{
-    min-height: 100px;
-
-}
-
-.loginForm{
-    min-height: 100px;
-
-    overflow:auto;
-}
-.form p{
-    color: red;
+.regisform {
+  min-height: 100px;
 }
 
-.producten img{
-    width: 100%;
-    height: 200px;
-    margin:20px auto;
-  
+.loginForm {
+  min-height: 100px;
+
+  overflow: auto;
 }
-.producten h2,.producten h1{
-    text-align: center;
+.form p {
+  color: red;
+}
+
+.producten img {
+  width: 100%;
+  height: 200px;
+  margin: 20px auto;
+}
+.producten h2,
+.producten h1 {
+  text-align: center;
 }
 
 /*dropdown*/
 
 /**producten*/
-#product label{
-    width: 100%;
+#product label {
+  width: 100%;
 }
-#produc input[type=text],input[type=number],input[type=email], input[type=date],select,input[type=password] {
-    width: 100%;
-    padding: 5px 0px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    background-color: #333;
-    color: #fff;
-
+#produc input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="date"],
+select,
+input[type="password"] {
+  width: 100%;
+  padding: 5px 0px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #333;
+  color: #fff;
 }
 
 /*        */
 
-#list{
+#list {
+  background-color: red;
+  text-align: center;
+  text-decoration: underline;
 
-    background-color: red;
-    text-align: center;
-    text-decoration: underline; 
-
-    min-height: 100px;
-    right: -600px;
-
+  min-height: 100px;
+  right: -600px;
 }
 
-#list_product{
-    min-height: 100px;
+#list_product {
+  min-height: 100px;
 }
-#exit{
-    width: 50px;
-    float: right;
-    color: white;
-    background-color: red;
-    border: none;
-
+#exit {
+  width: 50px;
+  float: right;
+  color: white;
+  background-color: red;
+  border: none;
 }
 
 /*dropdwon product*/
-#soort,#soort_car{
-    width: 100%;
-    margin-top: 50px;
-    color: aliceblue;
-    z-index: 1;
+#soort,
+#soort_car {
+  width: 100%;
+  margin-top: 50px;
+  color: aliceblue;
+  z-index: 1;
 }
 /****************************startpagina*************************************************/
 
-#welkom_startpagina{
-    color: #333;
+#welkom_startpagina {
+  color: #333;
 }
 
-#welkom_img{
-    width: 500px;
-    display: block;
-    margin: auto auto;
+#welkom_img {
+  width: 500px;
+  display: block;
+  margin: auto auto;
 }
 /**         toevoegen knop van bij shoppen       **/
 
-.toevoegen{
-    width: 100%;
-    background-color: #333;
-    color: aliceblue;
-    border-color: #333;
-
+.toevoegen {
+  width: 100%;
+  background-color: #333;
+  color: aliceblue;
+  border-color: #333;
 }
 
-.aantal{
-    width: 25%;
-
+.aantal {
+  width: 25%;
 }
-.regeling{
-
-    width: 25%;
-    display: none;
-
-
+.regeling {
+  width: 25%;
+  display: none;
 }
 
-#volgende{
-    width: 10%;
-    height: 25px;
-    background-color: #333;
-    color: #fff;
-    border: 1px solid #333;
-    transition: all 0.1s;
+#volgende {
+  width: 10%;
+  height: 25px;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #333;
+  transition: all 0.1s;
 
-    display:block;
-
+  display: block;
 }
-#volgende:hover{
-    padding: 1px;
+#volgende:hover {
+  padding: 1px;
 }
 
 /* verwijder knop van show_list.js*/
-.verwijderen{
-    width: 10%;
-
+.verwijderen {
+  width: 10%;
 }
-#afreken{
-    background-color: #333; 
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: none;
-    font-size: 16px;
-    margin-bottom: 10px;
-
+#afreken {
+  background-color: #333;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: none;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
-#afreken a{
-    text-decoration: none;
-    color: #fff;
-
+#afreken a {
+  text-decoration: none;
+  color: #fff;
 }
 
-.janee{
-    background-color: #333; /* Green */
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-
+.janee {
+  background-color: #333; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.janee a {
+  color: #fff;
+}
+#msg,
+#error {
+  text-align: center;
+  position: relative;
+  transition: all 0.5s;
 }
 
-#msg,#error{
-    text-align: center;
-    position: relative;
-    transition: all 0.5s;
+.hidemsg {
+  top: -300px;
+  left: 0px;
 }
-
-.hidemsg{
-    top:-300px;
-    left:0px;
-}
-.showmsg{
-    top:100px;
-    left:0px;
-    z-index: 0;
+.showmsg {
+  top: 100px;
+  left: 0px;
+  z-index: 0;
 }
 
 /****************profiel***************/
-#profiel{
-    padding: 0px 0px;
-    background-color: #330; /* Green */
-    margin-top: 100px;
+#profiel {
+  padding: 0px 0px;
+  background-color: #330; /* Green */
+  margin-top: 100px;
 }
-#profiel a{
-    background-color: #333; /* Green */
-    border: none;
-    color: white;
-    padding:  45px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
-
-
-
-#footer{
-    width: 100%;
-
-    margin-top:700px;
-
-    background-color: #333;
-}
-footer{
-
-    height: 60px;  
-    line-height: 0px;
-
-    color: #fff;
-
-}
-#inhoud{
-    margin-top: 50px;
-}
-#inhoud h3{
-
-    text-align: center;
-    color: #333;
-}
-#inhoud p{
-
-    text-align: center;
-    color: #333;
+#profiel a {
+  background-color: #333; /* Green */
+  border: none;
+  color: white;
+  padding: 45px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
-.profiel_button{
-    padding: 20px; 
-    width: 200px;
-    background-color: #fff;
-    margin: 10px;
+#footer {
+  width: 100%;
 
-}
-#rbForm{
-    width: 50%;
-    margin: auto auto;
-}
-#mnc{
-    width: 20%;
+  margin-top: 700px;
 
+  background-color: #333;
+}
+footer {
+  height: 60px;
+  line-height: 0px;
+
+  color: #fff;
+}
+#inhoud {
+  margin-top: 50px;
+}
+#inhoud h3 {
+  text-align: center;
+  color: #333;
+}
+#inhoud p {
+  text-align: center;
+  color: #333;
+}
+
+.profiel_button {
+  padding: 20px;
+  width: 200px;
+  background-color: #fff;
+  margin: 10px;
+}
+#rbForm {
+  width: 50%;
+  margin: auto auto;
+}
+#mnc {
+  width: 20%;
 }
 
 /*error*/
-#errorfile{
-    overflow: auto;
-    height: 300px;
-
+#errorfile {
+  overflow: auto;
+  height: 300px;
 }
 
 .clearfix {
-    clear: both;
+  clear: both;
 }
 
-#contact{
-      margin: 0 0;
-    border-right: 0 ;
-    border-radius: 0px;
+#contact {
+  margin: 0 0;
+  border-right: 0;
+  border-radius: 0px;
 }
-#info{
-      margin: 0 0;
-    border-left: 0 ;
-    border-radius: 0px;
-}
-
-#info div h2{
-     text-align: center;
+#info {
+  margin: 0 0;
+  border-left: 0;
+  border-radius: 0px;
 }
 
-#info div label{
-     float: left;
-      margin-right: 0em;
-  
+#info div h2 {
+  text-align: center;
 }
 
-#info div iframe{
-     margin-top: 80px;
-  
+#info div label {
+  float: left;
+  margin-right: 0em;
 }
 
-
-
-
-
+#info div iframe {
+  margin-top: 80px;
+}

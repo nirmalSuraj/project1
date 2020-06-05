@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2020-05-20 12:06:51
+/* Smarty version 3.1.31, created on 2020-06-04 10:09:22
   from "C:\xampp\htdocs\project\smarty\templates\shoppen_klant.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5ec5013bc7cfa1_33626113',
+  'unifunc' => 'content_5ed8ac324f3e25_40348915',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6a398b236bd2921f6cbc4fce9dbb9d1b47cacdca' => 
     array (
       0 => 'C:\\xampp\\htdocs\\project\\smarty\\templates\\shoppen_klant.tpl',
-      1 => 1589969210,
+      1 => 1591257990,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ec5013bc7cfa1_33626113 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ed8ac324f3e25_40348915 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -174,7 +174,8 @@ $_smarty_tpl->tpl_vars['__smarty_section_teller'] = $__section_teller_1_saved;
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
+          <h4 class="modal-title"><?php echo $_smarty_tpl->tpl_vars['header_modal']->value;?>
+</h4>
         </div>
         <div class="modal-body" id='modal_body'>
          

@@ -35,11 +35,7 @@ try{
     {		
         case 7: // bekijken
             $_srv= "toon.php";
-            $_SESSION['comment']= "L_lezen_C.html";
-            //$_start=0;
-
-
-            //$_requierd="";
+            
             break;
 
         case 8: // aanpassen
@@ -110,6 +106,7 @@ try{
     }
     
     $_inhoud.="
+    <button class='janee'> <a href='a_admin.php'>Terug</a></button>
      </form>
     </div>";
 

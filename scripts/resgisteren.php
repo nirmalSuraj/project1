@@ -43,6 +43,7 @@ try{
                                  ["$_naam","$_mail","$_geboortedatum","$_voornaam","$_straat","$_nr","$_telefoon",date("Y-m-d"),"$_gender","$_pk","$_aanpreek","$_rol"], 
                                  ["d_naam","d_email","d_geboortedatum","d_voornaam","d_straat","d_huisNummer","d_telefoonnummer","d_datum","t_gender_d_index","t_adres_d_index","t_aanspreekTitel_d_index","t_rol_d_index"]);
 
+           
 
             $_resul=$_PDO -> query("$_query");
             //als deze persoon niet bestaat registeren
