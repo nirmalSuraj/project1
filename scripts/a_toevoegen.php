@@ -106,6 +106,7 @@ try{
             }else{
 
                 $_error="{$_valideren->errorValidate()}";
+                
                 Redirect::to("a_admin.php?error='{$_valideren->errorValidate()}'");
             }
 

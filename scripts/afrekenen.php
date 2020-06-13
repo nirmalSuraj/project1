@@ -35,7 +35,7 @@ try{
 
         }else{
 
-            Redirect::to("shoppen.php?error=U heeft geen prodcuten gekozen");
+            Redirect::to("shoppen.php?error=U hebt geen prodcuten gekozen");
 
         }
 
@@ -49,7 +49,9 @@ try{
        
         if( $_count == null){
             $_factuurnummer .= date("d-m-Y");
+
             $_factuurnummer .="-0";
+            
             $_count=0;
            
         }else{
@@ -93,7 +95,7 @@ try{
                             
                         }else{
                             /*indien  deze product op is gelijk verwijderen en terug naar de shoppen.php gaan zo dat gebruiker 
-                              een andere keuze kan maken.
+                             de gebruiker een andere keuze kan maken.
                             */
                             delete("t_list",["d_index","=",$_user,"and","t_producten_d_index","=",$_id]);
                             

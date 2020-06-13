@@ -6,7 +6,7 @@ try{
 
     /*
 
- indeze script gaan zien of dat producten al geselecteerd, indien tovoegenkop blijft verwijderd
+ indeze script gaan zien of dat producten al geselecteerd zijn, indien ja tovoegenkop blijft verwijderd
   en standardwaarde wordt niet toegevoed.
  */
 

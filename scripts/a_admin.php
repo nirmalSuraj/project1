@@ -52,6 +52,7 @@ die gaat gekijken of er $_gekozen var al een data heeft indien niet dan wordt ge
 }catch(Exception $e){
 
     require("../php_lib/myExceptionHandling.inc.php");
+    
     echo  myExceptionHandling($e, "../error/error.csv");
 
 

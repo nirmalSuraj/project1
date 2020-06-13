@@ -21,7 +21,7 @@ try{
 
                     $_PDO->query("$_query");
        
-       Redirect::to("../scripts/bezoeker.php?msg=Tot vogende keer ");
+       Redirect::to("../scripts/login.php?msg=Tot vogende keer ");
     }
    
 

@@ -78,36 +78,7 @@ try{
         
     }
     
- /*   
-  $_index=($_SESSION['tabelIndex'] != 't_authentication'?"d_index":"d_user");
-    $_query="select * from {$_SESSION['tabelIndex']} where $_index={$_user}";
-    
-        $_resul=$_PDO->query("$_query");
-        
-        if($_resul->rowCount() <= 0){
-            throw new PDOException("database inconsistentie ");
-        }
-        
-         while($_row=$_resul->fetch(PDO::FETCH_ASSOC)){
-             
-             if($_SESSION['tabelIndex'] == "t_users"){
-                  require("../code/user_gegevens.php");// selectie formulier
-             }
-             
-             if($_SESSION['tabelIndex'] == "t_bedrijf"){
-                  require("../code/bedrijf_gegevens.php");// selectie formulier
-             }
-             if($_SESSION['tabelIndex'] == "t_authentication"){
-                 
-                  require("../code/nieuw_paswoord.php");// selectie formulier
-             }
-      
-            
-         }
 
-
-
-*/
     $_menu=3;
 
 

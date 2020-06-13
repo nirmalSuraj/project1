@@ -11,6 +11,7 @@ try{
     if(isset($_POST['send'])){
         //aanmaken van new validatie object
         $_valideren=new Validatie();
+        //regels van validatie
         $_valideren->validate($_POST,[
 
             "naam"=>[
@@ -27,7 +28,9 @@ try{
         ]);
 
         if($_valideren->check()){
-require("../php_lib/sendMail.inc.php");
+
+            require("../php_lib/sendMail.inc.php");
+
             sendMail ("test",$_POST['onderwerp'],$_POST['mail'],$_header="");
              $_inhoud=" 
     <div class='col-md-7 col-sm-12 regisform form bg-Success' >
@@ -37,6 +40,7 @@ require("../php_lib/sendMail.inc.php");
      </div>";
 
         }else{
+            
             Redirect::to("$_srv?error=".$_valideren->errorValidate()."");
         }
     }else{

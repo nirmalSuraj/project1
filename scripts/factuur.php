@@ -82,7 +82,7 @@ try{
 
 
 
-            //als er geen facturen zijn terug naar homepagina,met msg dat er geen facturen zijn 
+            //als er geen facturen zijn, terug naar homepagina,met error bericht dat er geen facturen zijn 
         }else{
             if($_SESSION['tabelIndex'] == "t_factuur"){
                 Redirect::to("a_admin.php?error=Geen factuur gevonden");
@@ -111,8 +111,11 @@ try{
 
             $_query="select * from v_full_gegevens_bedrijf	 where d_user = {$_user}";
             $_resul1=$_PDO->query($_query);
+
             if($_resul1->rowCount() > 0 ){
+
                 while($_row=$_resul1->fetch(PDO::FETCH_ASSOC)){
+                    //inhoud factuur
                     $_inhoud.="<th colspan='6' >
         Bedrijf:{$_row['d_naam']}<br>
         Btw:{$_row['d_btw']}<br>

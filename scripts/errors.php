@@ -42,12 +42,16 @@ try{
             }else{
                 //datum dat binnen komt rangschikken van dag naar jaar
                 list($_y,$_m,$_d)=explode("-",$_POST['van']);
+
                 $_POST['van']="$_d-$_m-$_y";
+
                 list($_y,$_m,$_d)=explode("-",$_POST['tot']);
+
                 $_POST['tot']="$_d-$_m-$_y";
 
                 //csv file open
                 $_file = fopen("../error/error.csv","r");
+
                 $_inhoud.="<div class='col-lg-6 col-sm-12 regisform form' id='errorfile' >";
                 //lopen tot einde van de file
                 while(!feof($_file)){
@@ -81,7 +85,9 @@ try{
 
     //download
     if(isset($_GET["dwn"]) && $_GET["dwn"]=="go"){
+
         require "../php_lib/download.php";
+        //download functie
         download($_srv,"../error/error.csv");
     }
 
@@ -97,6 +103,7 @@ try{
             fclose($_file);
 
     Redirect::to("$_srv?msg=Gelukt");
+    
         }else{
             Redirect::to("$_srv?error=File bestaat niet Neem contact op met ontwikkelaar");
 

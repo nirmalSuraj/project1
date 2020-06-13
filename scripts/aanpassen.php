@@ -5,7 +5,9 @@ try{
     require "../code/session_uitpakken.php";
 
     $_tpl='home_klant.tpl';
+
      $_toegang=[6,8];
+     
       if (!isset($_SESSION["actie"]) || !in_array($_SESSION["actie"],$_toegang)){
 
         throw new Exception("illegal access");

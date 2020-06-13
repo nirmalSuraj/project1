@@ -106,16 +106,27 @@ try{
                     }
                     //als persistentie true is dan
                     if($_persist){
+
                         $_salt=time();
+
                         $_identifier=encrypt($_logon, $_salt);
+
                         $_token=encrypt(uniqid(rand(), TRUE));
+
                         $_expire= time()+ (60*60*3);
+
                         setcookie("auth", "$_identifier:$_token", $_expire);
+
                         logSecurityInfo($_logon,"persistentie");
+
                     }else{
+                        
                         $_identifier="";
+                        
                         $_token="";
+                        
                         $_expire= 0; 
+                        
                         logSecurityInfo($_logon,"geen persistentie");
                     }
 
@@ -138,7 +149,8 @@ try{
                     $_SESSION['logon']=$_logon;
                     
                     if($_SESSION['rol'] == 2){
-                         Redirect::to("home_admin.php");
+                      
+                        Redirect::to("home_admin.php");
                     }
 
                     //als alles ok is dan ridirect naar home pagina van klant
